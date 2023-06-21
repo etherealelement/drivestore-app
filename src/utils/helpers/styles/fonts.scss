@@ -1,0 +1,46 @@
+@font-face {
+  font-family: San Francisco Pro Display;
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("SFProDisplay"),
+    /* Если не получилось, загрузит woff2 */
+  url("../../../utils/fonts/SFProDisplay/SFProDisplay-Regular.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+  url('../../../utils/fonts/SFProDisplay/SFProDisplay-Regular.woff2') format("woff");
+}
+
+
+@font-face {
+  font-family: San Francisco Pro Display;
+  font-style: normal;
+  font-weight: 700;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("SFProDisplay"),
+    /* Если не получилось, загрузит woff2 */
+  url("../../../utils/fonts/SFProDisplay/SFProDisplay-Bold.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+  url('../../../utils/fonts/SFProDisplay/SFProDisplay-Bold.woff2') format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("SFProDisplay"),
+    /* Если не получилось, загрузит woff2 */
+  url("../../../utils/fonts/Barlow/Barlow-Regular.ttf") format("ttf");
+    /* Если браузер не поддерживает woff2, загрузит woff */
+}
+
+@font-face {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: 700;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("SFProDisplay"),
+    /* Если не получилось, загрузит woff2 */
+  url("../../../utils/fonts/Barlow/Barlow-Bold.ttf") format("ttf");
+    /* Если браузер не поддерживает woff2, загрузит woff */
+}
