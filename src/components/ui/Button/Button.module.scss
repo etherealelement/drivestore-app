@@ -1,0 +1,32 @@
+.button{
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #1C62CD;
+  border-radius: 3px;
+  color: #FFFFFF;
+  border: none;
+  transition: all .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #3b86fc;
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: rgba(218, 214, 214, 0.73);
+  }
+
+
+  &Medium {
+    padding: 17px 38px 16px 40px;
+  }
+}
