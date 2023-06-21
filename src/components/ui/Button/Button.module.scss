@@ -7,7 +7,6 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   background: #1C62CD;
-  border-radius: 3px;
   color: #FFFFFF;
   border: none;
   transition: all .3s;
@@ -27,6 +26,17 @@
 
 
   &Medium {
+    border-radius: 3px;
     padding: 17px 38px 16px 40px;
+  }
+
+  &Big {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 10px 16px  9px 16px;
   }
 }
