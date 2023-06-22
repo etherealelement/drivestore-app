@@ -1,0 +1,32 @@
+.swiper-pagination-bullet-active {
+  background-color: #FFFFFF !important;
+}
+
+
+.swiper-pagination-bullet {
+  opacity: 1 !important;
+  border: white solid 1px !important;
+  background: #1C62CD;
+}
+
+.slider {
+  max-width: 875px;
+}
+
+.swiper__container{
+  max-width: 870px;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.disabled_swiper_button {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}

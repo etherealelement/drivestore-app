@@ -1,3 +1,8 @@
 .banner {
   margin-top: 78px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 }
