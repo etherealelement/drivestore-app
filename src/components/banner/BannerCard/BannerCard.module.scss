@@ -1,0 +1,105 @@
+.banner {
+  border-radius: 3px;
+  border: 1px solid #CDCDCD;
+  max-width: 265px;
+
+  &__top {
+    &_price{
+      display: flex;
+      justify-content: space-between;
+
+      &_action {
+        background: #1C62CD;
+        padding: 8px 20px 8px 20px;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+
+      &_total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        font-size: 27px;
+        font-family: "Barlow", sans-serif;
+        font-weight: 700;
+        color: #1C62CD;
+        padding-right: 8px;
+      }
+    }
+
+    &_discount {
+      text-align: end;
+      display: flex;
+      justify-content: flex-end;
+      gap: 3px;
+      align-items: center;
+      font-size: 14px;
+      color: #C4C4C4;
+      margin-right: 4px;
+      margin-top: 7px;
+      position: relative;
+      
+      &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        right: 7px;
+        bottom: 5px;
+        background: #C4C4C4;
+        position: absolute;
+        transform: rotate(346deg);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7px;
+
+    &_img {
+      width: 125px;
+      margin-right: 20px;
+    }
+
+    &_descr {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 18px;
+      font-family: "SF Pro Display", sans-serif;
+      font-weight: 700;
+      margin-top: 5px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__bottom {
+    background-color: #F0F0F4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    &_stock {
+      font-size: 18px;
+      font-family: "SF Pro Display",sans-serif;
+
+    }
+
+    &_data {
+      font-size: 18px;
+      font-family: "Barlow", sans-serif;
+      font-weight: 700;
+      color: #1C62CD;
+    }
+  }
+}

@@ -74,7 +74,7 @@
           &:hover {
             color: #505050;
 
-            border-bottom: 2px #1C62CD;
+            border-bottom: 3px #1C62CD;
           }
 
           &_link {
@@ -109,13 +109,14 @@
               position: absolute;
               background-color: #1C62CD;
               height: 3px;
-              bottom: -2px;
+              bottom: -3px;
               transition: all .3s;
               right: 0;
             }
 
             &:focus {
-              font-weight: 600;
+              display: block;
+              border-bottom: 3px solid #1C62CD;
             }
 
             &:active {
