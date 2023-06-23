@@ -1,0 +1,28 @@
+.searchItem{
+  transition: all .3s ease-in-out;
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &__link {
+    list-style-type: none;
+    text-decoration: none;
+    color: #2F3035;
+    font-size: 20px;
+    font-family: "SF Pro Display", sans-serif;
+    padding: 11px 26px;
+    transition: add .3s ease-in-out;
+    &:focus {
+      font-weight: 700;
+      border-radius: 5px;
+      background: #F0F0F4;
+    }
+
+    &:hover {
+      border-radius: 5px;
+      background:  #F0F0F4;
+      color: #505050;
+      transform: translateY(-3px);
+    }
+  }
+}
