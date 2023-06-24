@@ -1,9 +1,4 @@
 .searchItem{
-  transition: all .3s ease-in-out;
-  &:hover {
-    transform: translateY(-3px);
-  }
-
   &__link {
     list-style-type: none;
     text-decoration: none;
@@ -12,11 +7,15 @@
     font-family: "SF Pro Display", sans-serif;
     padding: 11px 26px;
     transition: add .3s ease-in-out;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     &:focus {
       font-weight: 700;
-      border-radius: 5px;
       background: #F0F0F4;
     }
+
 
     &:hover {
       border-radius: 5px;
