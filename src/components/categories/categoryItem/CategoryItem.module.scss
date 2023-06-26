@@ -1,0 +1,64 @@
+.categoryItem {
+  max-width: 370px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  border: 1px solid #CDCDCD;
+  background: #FFF;
+  padding: 22px 14px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  &__text {
+    margin-right: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &_descr {
+      color: #2F3035;
+      font-size: 23px;
+      font-family: "Barlow", sans-serif;
+      font-weight: 700;
+    }
+
+    &_more {
+      color:  #C4C4C4;
+      font-size: 14px;
+      font-family: "SF Pro Display", sans-serif;
+      text-decoration: none;
+      position: relative;
+      width: 62px;
+      transition: all .3s ease-in-out;
+      &:before {
+        content: "";
+        width: 6px;
+        height: 9px;
+        position: absolute;
+        background-image: url("../../../assets/svgicons/Back.svg");
+        right: -13px;
+        top: 3px;
+      }
+
+      &:before:hover {
+        transform: translateX(3px);
+      }
+
+
+      &:hover {
+        color: #9f9f9f;
+        transform: translateX(3px);
+      }
+    }
+  }
+  &:last-child {
+    padding-right: 50px;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+  }
+
+  &:active {
+    transform: translateY(-10px);
+  }
+}
