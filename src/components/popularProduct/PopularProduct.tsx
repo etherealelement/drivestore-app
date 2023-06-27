@@ -10,11 +10,12 @@ export const PopularProduct: FC = () => {
             <h2 className={styles.popular__title}>
                 Популярные товары
             </h2>
-            <div className={styles.popular__nav}>
-                {navArr.map(item => <NavBar
-                children={item}
+            <ul className={styles.popular__nav}>
+                {navArr.map((item,index) => <NavBar
+                    key={index}
+                    children={item}
                 ></NavBar>)}
-            </div>
+            </ul>
             <ul className={styles.popular__card_list}>
 
             </ul>

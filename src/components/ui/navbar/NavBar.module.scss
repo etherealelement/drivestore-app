@@ -1,0 +1,44 @@
+.navItem{
+
+
+  &__link {
+    text-decoration: none;
+    color: #2F3035;
+    text-align: center;
+    font-size: 15px;
+    font-family: "SF Pro Display", sans-serif;
+    position: relative;
+    padding-bottom: 10px;
+    &:hover {
+      color: #505050;
+      border-bottom: 3px #1C62CD;
+    }
+
+    &:focus {
+      color:  #2F3035;
+      font-size: 15px;
+      font-family: "SF Pro Display", sans-serif;
+      font-weight: 500;
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      left: auto;
+      position: absolute;
+      background-color: #1C62CD;
+      height: 3px;
+      bottom: -3px;
+      transition: all .3s;
+      right: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+      right: auto;
+      left: 0;
+    }
+
+
+  }
+}

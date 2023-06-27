@@ -23,6 +23,19 @@
   url('../../../utils/fonts/SFProDisplay/SFProDisplay-Bold.woff2') format("woff");
 }
 
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("SFProDisplay"),
+    /* Если не получилось, загрузит woff2 */
+  url("../../../utils/fonts/SFProDisplay/SFProDisplay-Bold.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+  url('../../../utils/fonts/SFProDisplay/SFProDisplay-Bold.woff2') format("woff");
+}
+
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
