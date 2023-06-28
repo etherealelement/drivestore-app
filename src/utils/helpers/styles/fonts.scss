@@ -41,7 +41,7 @@
   font-style: normal;
   font-weight: 400;
   /* Браузер сначала попробует найти шрифт локально */
-  src: local("SFProDisplay"),
+  src: local("Barlow"),
     /* Если не получилось, загрузит woff2 */
   url("../../../utils/fonts/Barlow/Barlow-Regular.ttf") format("ttf");
     /* Если браузер не поддерживает woff2, загрузит woff */
@@ -52,7 +52,7 @@
   font-style: normal;
   font-weight: 700;
   /* Браузер сначала попробует найти шрифт локально */
-  src: local("SFProDisplay"),
+  src: local("Barlow"),
     /* Если не получилось, загрузит woff2 */
   url("../../../utils/fonts/Barlow/Barlow-Bold.ttf") format("ttf");
     /* Если браузер не поддерживает woff2, загрузит woff */

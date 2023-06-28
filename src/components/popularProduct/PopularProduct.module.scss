@@ -14,4 +14,43 @@
     justify-content: space-between;
     max-width: 665px;
   }
+
+  &__card {
+    &_list {
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+  }
+
+  &__block {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+
+
+    &_btn {
+      color:  #2F3035;
+      cursor: pointer;
+      font-size: 15px;
+      font-family: "SF Pro Display", sans-serif;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      background:  #F0F0F4;
+      padding: 17px 43px;
+      border: none;
+      transition: all .3s;
+      &:hover {
+        color: #ffffff;
+        background-color: #5b5c5e;
+      }
+
+      &:active {
+        transform: translateY(-3px);
+      }
+
+    }
+  }
 }

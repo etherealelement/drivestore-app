@@ -1,0 +1,128 @@
+.cardItem {
+  border-radius: 3px;
+  border: 1px solid #CDCDCD;
+  width: 271px;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+  padding-bottom: 41px;
+  text-decoration: none;
+
+
+  &:hover {
+    transform: translateY(-3px);
+    border-radius: 3px;
+    background: #FFF;
+    box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+
+  }
+  &:hover p {
+    color: #1C62CD;
+  }
+
+  &:hover::before {
+    content: "посмотреть товар";
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    width: 230px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 3px;
+    opacity: 0.8999999761581421;
+    background: #FFF;
+    color: #2F3035;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 20px;
+    font-family: "SF Pro Display", sans-serif;
+  }
+
+
+  &__fav {
+    position: absolute;
+    right: 19px;
+    top: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__block {
+    padding-top: 52px;
+    padding-right: 31px;
+    padding-left: 40px;
+
+
+    &_descr {
+      padding-top: 14px;
+      color:  #2F3035;
+      text-align: center;
+      font-size: 18px;
+      font-family: "SF Pro Display", sans-serif;
+    }
+
+    &_price {
+      padding-top: 25px;
+      color: #2F3035;
+      text-align: center;
+      font-size: 30px;
+      font-family: "Barlow", sans-serif;
+      font-weight: 700;
+
+
+    &_box {
+      margin-top: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      &_message {
+        color: #2F3035;
+        text-align: center;
+        font-size: 18px;
+        font-family: "SF Pro Display", sans-serif;
+        font-weight: 700;
+      }
+
+      &_link {
+        color:  #1C62CD;
+        font-size: 16px;
+        font-family: "SF Pro Display", sans-serif;
+      }
+    }
+    }
+
+  }
+  
+  &__btn {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10px 0px 0px 0px;
+    bottom: 0;
+    right: 0;
+    background:  #1C62CD;
+    border: none;
+    padding: 10px 16px 8px 14px;
+    transition: all .3s;
+
+    &:hover{
+      background: #4c8bf6;
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFF;
+    font-size: 12px;
+    font-family: "SF Pro Display", sans-serif;
+    letter-spacing: 0.84px;
+    padding: 8px 15px;
+    background:  #1C62CD;
+  }
+}
