@@ -44,6 +44,8 @@ const popularProduct:PopularProductProps[] = [
 ]
 
 export const PopularProduct: FC = () => {
+
+    // Создание поиска
     const [event, setEvent] = useState("запчасти");
     const handleEvent = (e:any):void => {
         setEvent(e.target.innerHTML)
