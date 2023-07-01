@@ -15,8 +15,8 @@ export const Sales: FC = () => {
 
                 <div className={styles.sales__block}>
                     <p className={styles.sales__block_text}>
-                        CКИДКИ
-                        на все запчасти
+                        CКИДКИ<br/>
+                        на все запчасти<br/>
                         до 70%
                     </p>
                 </div>

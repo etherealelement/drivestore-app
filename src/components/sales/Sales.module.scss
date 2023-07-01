@@ -4,5 +4,46 @@
 
   &__inner {
     background: #1C62CD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 56px;
+  }
+
+
+  &__block {
+    max-width: 308px;
+
+
+    &_text {
+      color: #FFF;
+      font-size: 36px;
+      font-family: "SF Pro Display", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+    }
+  }
+
+  &__btn {
+    color: #2F3035;
+    text-align: right;
+    font-size: 24px;
+    font-family: "SF Pro Display", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    border: none;
+    padding: 3px 41px;
+    transition: all .3s;
+
+    &:hover{
+      background-color: #bdb7b7;
+    }
+
+    &:active {
+      transform: translateY(-3px);
+    }
   }
 }
