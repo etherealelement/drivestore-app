@@ -6,7 +6,9 @@ import {Search} from "./components/search/Search.tsx";
 import {Categories} from "./components/categories/Categories.tsx";
 import {PopularProduct} from "./components/popularProduct/PopularProduct.tsx";
 import {Sales} from "./components/sales/Sales.tsx";
-
+import {popularProduct} from "./utils/data/productArray.ts";
+import {navArr} from "./utils/data/productArray.ts";
+import {popularProduct2} from "./utils/data/productArray.ts";
 
 
 function App() {
@@ -17,8 +19,9 @@ function App() {
             <Banner></Banner>
             <Search></Search>
             <Categories></Categories>
-            <PopularProduct></PopularProduct>
+            <PopularProduct ProductData={popularProduct} title={"Популярные товары"} navData={navArr}></PopularProduct>
             <Sales></Sales>
+            <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
         </main>
     </>
   )
