@@ -26,17 +26,29 @@
 
 
   &Medium {
-    border-radius: 3px;
     padding: 17px 38px 16px 40px;
+  }
+
+
+  &Small {
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
   }
 
   &Big {
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-family: 'SF Pro Display';
+    font-family: 'SF Pro Display', sans-serif;
     font-weight: 600;
     font-size: 11px;
     line-height: 13px;
     padding: 10px 16px  9px 16px;
+  }
+
+  &Border {
+    border-radius: 3px;
   }
 }

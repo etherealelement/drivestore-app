@@ -1,0 +1,147 @@
+.footer {
+  margin-top: 97px;
+  background:  #F0F0F4;
+  padding-bottom: 89px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  &__form {
+    padding-top: 42px;
+    &_title {
+      max-width: 222px;
+      color: #2F3035;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 34px;
+    }
+
+
+    &_block {
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+      &_input {
+        background: #FFF;
+        border: none;
+        padding: 8px 66px 8px 12px;
+        width: 200px;
+        &:focus {
+          border: 1px #5e96ea;
+        }
+
+        &::placeholder {
+          color:  #C4C4C4;
+          font-size: 14px;
+          font-family: "SF Pro Display", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  &__links {
+
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 43px;
+      gap: 100px;
+    }
+  }
+
+
+  &__list {
+    &_left {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      min-width: 95px;
+      &_item {
+        &_link {
+          text-decoration: none;
+          color:  #2F3035;
+          font-size: 14px;
+          font-family: "SF Pro Display", sans-serif;
+          font-weight: 400;
+          line-height: normal;
+          &:hover {
+            font-weight: 700;
+          }
+
+          &:focus {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+
+    &_right {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      min-width: 170px;
+      &_item {
+
+
+        &_link {
+          text-decoration: none;
+          color:  #2F3035;
+          font-size: 14px;
+          font-family: "SF Pro Display", sans-serif;
+          font-weight: 400;
+          line-height: normal;
+
+          &:hover {
+            font-weight: 700;
+          }
+
+          &:focus {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__links {
+    &_bottom {
+      margin-top: 46px;
+
+      &_link {
+        text-decoration: none;
+        color: #48494D;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: normal;
+        transition: all .3s;
+
+        &:nth-child(1) {
+          margin-right: 81px;
+        }
+
+        &:hover {
+         color: #b4b2b2;
+        }
+
+        &:focus {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+
+  &__social{
+    display: flex;
+    padding-top: 80px;
+    gap: 30px;
+  }
+}

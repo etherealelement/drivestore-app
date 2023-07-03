@@ -44,7 +44,7 @@ export const Search: FC = () => {
                     <div id={"tab-1"} className={styles.search__block_item}>
                         <form className={styles.search__block_form}>
                             <input placeholder={tabName} type="text" className={styles.search__block_form_input}/>
-                            <Button type={"submit"} size={"medium"}>искать</Button>
+                            <Button type={"submit"} size={"medium"} border={true}>искать</Button>
                         </form>
                     </div>
                 </div>

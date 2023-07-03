@@ -9,6 +9,7 @@ import {Sales} from "./components/sales/Sales.tsx";
 import {popularProduct} from "./utils/data/productArray.ts";
 import {navArr} from "./utils/data/productArray.ts";
 import {popularProduct2} from "./utils/data/productArray.ts";
+import {Footer} from "./components/footer/Footer.tsx";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <PopularProduct ProductData={popularProduct} title={"Популярные товары"} navData={navArr}></PopularProduct>
             <Sales></Sales>
             <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
+            <Footer></Footer>
         </main>
     </>
   )
