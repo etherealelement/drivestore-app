@@ -43,12 +43,35 @@ export const Footer: FC = () => {
                     </div>
                 </div>
                 <div className={styles.footer__social}>
-                    <Facebook></Facebook>
-                    <Inst></Inst>
-                    <Vk></Vk>
-                    <YouTube></YouTube>
+
+                    {/*Footer-social*/}
+
+                    <ul className={styles.footer__social_list}>
+                        <li className={styles.footer__social_item}>
+                            <a href="#" className={styles.footer__social_link}>
+                                <Facebook></Facebook>
+                            </a>
+                        </li>
+                        <li className={styles.footer__social_item}>
+                            <a href="#" className={styles.footer__social_link}>
+                                <Vk></Vk>
+                            </a>
+                        </li>
+                        <li className={styles.footer__social_item}>
+                            <a href="#" className={styles.footer__social_link}>
+                                <YouTube></YouTube>
+                            </a>
+                        </li>
+                        <li className={styles.footer__social_item}>
+                            <a href="#" className={styles.footer__social_link}>
+                                <Inst></Inst>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>;
 };
+
+

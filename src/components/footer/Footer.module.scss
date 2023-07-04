@@ -143,5 +143,12 @@
     display: flex;
     padding-top: 80px;
     gap: 30px;
+
+
+    &_list {
+      display: flex;
+      gap: 30px;
+
+      }
+    }
   }
-}
