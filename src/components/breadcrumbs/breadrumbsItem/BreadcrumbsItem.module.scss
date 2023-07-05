@@ -1,0 +1,29 @@
+.breadcrumbs__item {
+  position: relative;
+  &_link {
+    text-decoration: none;
+    color: #C4C4C4;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .3s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.breadcrumbs__item::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../../assets/svgicons/arrow_back.svg");
+  right: -12px;
+  top: 4px;
+  width: 6px;
+  height: 10px;
+}
+
+.breadcrumbs__item:last-child::after {
+  display: none;
+}
