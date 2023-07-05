@@ -7,6 +7,7 @@ import {AdressLogo} from "../ui/adressLogo/AdressLogo.tsx";
 import {UserFavorites} from "../ui/userContentBar/UserFavorites.tsx";
 import {UserHome} from "../ui/userContentBar/UserHome.tsx";
 import {UserCart} from "../ui/userContentBar/UserCart.tsx";
+import {Link} from "react-router-dom";
 
 
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
@@ -19,40 +20,40 @@ export const Header: FC = () => {
                     <nav className={styles.menu}>
                         <ul className={styles.menu__list}>
                             <li className={styles.menu__item}>
-                                <a href="#" className={styles.menu__item_link}>Магазины</a>
+                                <Link to="/catalog" className={styles.menu__item_link}>Магазины</Link>
                             </li>
                             <li className={styles.menu__item}>
-                                <a href="#" className={styles.menu__item_link}>Акции</a>
+                                <Link to="/catalog" className={styles.menu__item_link}>Акции</Link>
                             </li>
                             <li className={styles.menu__item}>
-                                <a href="#" className={styles.menu__item_link}>Доставка и оплата</a>
+                                <Link to="/" className={styles.menu__item_link}>Доставка и оплата</Link>
                             </li>
                         </ul>
                     </nav>
-                    <a href="#" className={styles.header__top_logo}>
+                    <Link to="/" className={styles.header__top_logo}>
                         <Logo></Logo>
-                    </a>
-                    <a href="#" className={styles.adressLink}>
+                    </Link>
+                    <Link to="#" className={styles.adressLink}>
                         <AdressLogo></AdressLogo>
                         Москва,  ул. Науки  25
-                    </a>
+                    </Link>
 
                     <ul className={styles.header__user}>
                         <li className={styles.header__user_item}>
-                            <a href="#">
+                            <Link to="/">
                                 <UserFavorites></UserFavorites>
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.header__user_item}>
-                            <a href="#">
+                            <Link to="/">
                                 <UserHome></UserHome>
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.header__user_item}>
-                            <a href="#" className={styles.header__user_item_link}>
+                            <Link to="/" className={styles.header__user_item_link}>
                                 <span>1</span>
                                 <UserCart></UserCart>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +62,7 @@ export const Header: FC = () => {
                 <ul className={styles.header__bottom_list}>
                     {navigationArr.map((item, index) => {
                        return <li className={styles.header__bottom_list_item} key={index}>
-                              <a href={"#"} className={styles.header__bottom_list_item_link}>{item}</a>
+                              <Link to={"#"} className={styles.header__bottom_list_item_link}>{item}</Link>
                        </li>
                     }) }
                 </ul>
