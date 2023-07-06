@@ -1,0 +1,15 @@
+.productContent {
+  margin-top: 50px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+

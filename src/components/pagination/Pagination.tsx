@@ -4,7 +4,7 @@ import {PaginationProps} from "./Pagination.props.ts";
 
 
 
-const paginationButtonArray:string[] = ["Гидроциклы", "Полноприводные", "от 5000", "BRP","еще"];
+const paginationButtonArray:string[] = ["Полноприводные", "от 5000", "BRP","еще"];
 
 export const Pagination: FC<PaginationProps> = ({children}:PaginationProps):JSX.Element => {
     return <section className={styles.pagination}>
