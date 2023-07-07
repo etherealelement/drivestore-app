@@ -1,0 +1,31 @@
+.availability {
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+    &_spn {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    &_input {
+      display: flex;
+      gap: 52px;
+      margin-top: 20px;
+      align-items: center;
+
+      &_box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

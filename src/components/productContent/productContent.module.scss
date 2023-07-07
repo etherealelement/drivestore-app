@@ -11,5 +11,18 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
   }
+
+
+  &__filter {
+
+
+    &_list {
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 42px;
+      margin-bottom: 41px;
+    }
+  }
 }
 
