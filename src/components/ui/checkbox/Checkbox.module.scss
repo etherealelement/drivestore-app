@@ -45,8 +45,4 @@
     position: absolute;
     z-index: -1;
   }
-
-  &__input:focus + &__custom {
-    box-shadow: 0px 0px 0px 1px;
-  }
 }

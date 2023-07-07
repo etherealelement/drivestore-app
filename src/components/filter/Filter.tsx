@@ -2,6 +2,7 @@ import { FC } from 'react';
 import {Availability} from "./availability/Availability.tsx";
 import styles from "./Filter.module.scss"
 import {NavBar} from "../ui/navbar/NavBar.tsx";
+import { New } from './new/New.tsx';
 
 
 const navArr: string[] = ["ПАРАМЕТРЫ","ПО МАРКЕ"]
@@ -14,5 +15,6 @@ export const Filter: FC = () => {
             >{item}</NavBar>)}
         </ul>
         <Availability></Availability>
+        <New></New>
     </div>;
 };

@@ -1,0 +1,22 @@
+.new__block {
+    margin-top: 20px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+    cursor: pointer;
+    &_spn {
+        font-weight: 600;
+    }
+
+    &_input {
+        display: flex;
+        justify-content: space-between;
+        gap: 19px;
+        margin-top: 20px;
+    }
+}
+
+
+.hidden { 
+    display: none;
+}
