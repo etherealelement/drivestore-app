@@ -1,0 +1,43 @@
+.price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    &__drop {
+
+
+        &_spn {
+            font-weight: 600;
+        }
+    }
+}
+
+.range {
+    margin-top: 39px;
+}
+
+
+.slider {
+    margin-top: 20px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-top: -6px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}

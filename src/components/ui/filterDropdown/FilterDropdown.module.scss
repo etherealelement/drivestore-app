@@ -1,0 +1,14 @@
+.dropdown {
+    margin-top: 39px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    &__block {
+        cursor: pointer;
+        &_spn {
+            font-weight: 600;
+        }
+    }
+}

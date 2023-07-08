@@ -16,7 +16,7 @@ export const New: FC = () => {
             <span className={styles.new__block_drop}>
                 {arrow ? <ArrowUp/> : <ArrowDown/>}
             </span>
-            <span className={styles.new__block_spn}>Наличие</span>
+            <span className={styles.new__block_spn}>Новинки</span>
         </div>
 
         <div className={`${arrow ? styles.new__block_input : styles.hidden}`}>
