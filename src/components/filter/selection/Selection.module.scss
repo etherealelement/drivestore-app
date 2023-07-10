@@ -1,0 +1,32 @@
+.selection {
+  margin-top: 42px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  &__label {
+    color:  #2F3035;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 14px;
+
+
+    &_select {
+      margin-bottom: 16px;
+      border: none;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      appearance:none;
+    }
+  }
+}
