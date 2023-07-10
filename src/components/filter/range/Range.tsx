@@ -19,9 +19,6 @@ export const Range: FC = (): JSX.Element => {
 		setArrow(!arrow);
 	};
 
-
-
-
 	return (
 		<>
 			<div className={styles.price} onClick={handleArrow}>

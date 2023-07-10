@@ -1,0 +1,37 @@
+.brand {
+  cursor: pointer;
+
+
+  &__block {
+    display: flex;
+    gap: 14px;
+
+    &_spn {
+      color: #48494D;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &_input {
+      margin-top: 22px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_link {
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration-line: underline;
+      display: block;
+      margin-top: 22px;
+      color: #1C62CD;
+      &_box {
+        margin-top: 18px;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
