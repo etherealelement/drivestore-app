@@ -7,6 +7,7 @@ import { Range } from './range/Range.tsx';
 import {Selection} from "./selection/Selection.tsx";
 import {Brand} from "./brand/Brand.tsx";
 import {Model} from "./model/Model.tsx";
+import {Stocks} from "./stocks/Stocks.tsx";
 
 const navArr: string[] = ["ПАРАМЕТРЫ","ПО МАРКЕ"];
 const optionsArr: string[] = ["90", "130", "154", "230","300"];
@@ -25,6 +26,7 @@ export const Filter: FC = () => {
         <Range></Range>
         <Selection options={optionsArr} children={optionsTitle}></Selection>
         <Brand></Brand>
-        <Model> </Model>
+        <Model></Model>
+        <Stocks></Stocks>
     </div>;
 };

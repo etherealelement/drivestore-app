@@ -16,7 +16,7 @@ export const Brand: FC = () => {
     return <div className={styles.brand}>
         <div className={styles.brand__block} onClick={handleArrow}>
             <span className={styles.brand__block_drop}>
-                {arrow ? <ArrowUp/> : <ArrowDown/>}
+                {arrow ? <ArrowDown/> : <ArrowUp/>}
             </span>
             <span className={styles.brand__block_spn}>Бренд</span>
         </div>

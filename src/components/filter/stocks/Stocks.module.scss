@@ -1,0 +1,70 @@
+.stocks {
+  margin-top: 40px;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    &_sale {
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.84px;
+      padding: 8px 15px;
+      background:  #1C62CD;
+      border: none;
+      transition: all .3s;
+      &:hover  {
+        transform: translateY(-3px);
+        background: #719bd9;
+      }
+    }
+
+    &_new {
+      color: #C4C4C4;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.84px;
+      padding: 6px 15px;
+      border: none;
+      transition: all .3s;
+      &:hover  {
+        transform: translateY(-3px);
+        background: #c0baba;
+        color: #ffffff;
+      }
+    }
+
+    &_hit {
+      color: #C4C4C4;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.84px;
+      padding: 6px 15px;
+      border: none;
+      transition: all .3s;
+
+      &:hover  {
+        transform: translateY(-3px);
+        background: #c0baba;
+        color: #ffffff;
+      }
+    }
+
+    &_diller {
+      color: #FFF;
+      font-weight: 700;
+      letter-spacing: 0.84px;
+      padding: 6px 10px;
+      background: #2F3035;
+      border: none;
+      transition: all .3s;
+      &:hover{
+        transform: translateY(-3px);
+        background: #8d8888;
+        color: #ffffff;
+      }
+    }
+  }
+}
