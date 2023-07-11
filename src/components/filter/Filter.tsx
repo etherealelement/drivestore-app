@@ -8,10 +8,13 @@ import {Selection} from "./selection/Selection.tsx";
 import {Brand} from "./brand/Brand.tsx";
 import {Model} from "./model/Model.tsx";
 import {Stocks} from "./stocks/Stocks.tsx";
+import {Countries} from "./countries/Countries.tsx";
 
 const navArr: string[] = ["ПАРАМЕТРЫ","ПО МАРКЕ"];
 const optionsArr: string[] = ["90", "130", "154", "230","300"];
 const optionsTitle: string[] = ["Мощность, л.с.", "Мощность двигателя, л.с.", "Макс. скорость"];
+const countriesArr: string[] = ["Россия", "Китай", "Германия", "CША"]
+
 
 export const Filter: FC = () => {
     return <div>
@@ -28,5 +31,6 @@ export const Filter: FC = () => {
         <Brand></Brand>
         <Model></Model>
         <Stocks></Stocks>
+        <Countries countries={countriesArr}></Countries>
     </div>;
 };

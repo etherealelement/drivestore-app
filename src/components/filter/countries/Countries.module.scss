@@ -1,0 +1,23 @@
+.countries {
+  margin-top: 40px;
+
+  &__box {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    &_link {
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration-line: underline;
+      display: block;
+      margin-top: 22px;
+      color: #1C62CD;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
