@@ -9,6 +9,7 @@ import {Brand} from "./brand/Brand.tsx";
 import {Model} from "./model/Model.tsx";
 import {Stocks} from "./stocks/Stocks.tsx";
 import {Countries} from "./countries/Countries.tsx";
+import {Choose} from "./choose/Choose.tsx";
 
 const navArr: string[] = ["ПАРАМЕТРЫ","ПО МАРКЕ"];
 const optionsArr: string[] = ["90", "130", "154", "230","300"];
@@ -32,5 +33,6 @@ export const Filter: FC = () => {
         <Model></Model>
         <Stocks></Stocks>
         <Countries countries={countriesArr}></Countries>
+        <Choose></Choose>
     </div>;
 };

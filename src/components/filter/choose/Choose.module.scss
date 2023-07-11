@@ -1,0 +1,38 @@
+.choose {
+  margin-top: 40px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+    &_btn {
+      color: #BDBEC2;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      padding: 17px 85px;
+      background: #F0F0F4;
+      transition: all .3s;
+      border: none;
+      &:hover {
+        background: #bbbbbb;
+        color: #ffffff;;
+      }
+    }
+
+    &_link {
+      color:  #C4C4C4;
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration-line: underline;
+      transition: all .3s;
+      &:hover {
+        color: #8d8d8d;
+      }
+    }
+  }
+}
