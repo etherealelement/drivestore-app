@@ -1,5 +1,6 @@
 .brand {
   cursor: pointer;
+  margin-top: 40px;
 
 
   &__block {
@@ -14,8 +15,10 @@
 
     &_input {
       margin-top: 22px;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      max-width: 213px;
     }
 
     &_link {

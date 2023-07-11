@@ -18,7 +18,7 @@ export const Brand: FC = () => {
             <span className={styles.brand__block_drop}>
                 {arrow ? <ArrowUp/> : <ArrowDown/>}
             </span>
-            <span className={styles.brand__block_spn}>Наличие</span>
+            <span className={styles.brand__block_spn}>Бренд</span>
         </div>
 
         <div className={`${arrow ? styles.brand__block_input : styles.hidden}`}>
