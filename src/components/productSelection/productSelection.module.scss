@@ -1,0 +1,67 @@
+.productSelection{
+  margin-top: 82px;
+
+  &__list {
+    background: var(--unnamed, #F0F0F4);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 22px;
+    padding-bottom: 24px;
+    height: 70px;
+  }
+
+  &__item {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      opacity: 1;
+    }
+
+    &:hover:before {
+      opacity: 1;
+      width: 100%;
+      right: auto;
+      left: 0;
+    }
+
+    &:before {
+      opacity: 1;
+      content: "";
+      width: 0;
+      left: auto;
+      position: absolute;
+      background-color: #1C62CD;
+      height: 3px;
+      bottom: -3px;
+      transition: all .3s;
+      right: 0;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+      color: var(--unnamed, #2F3035);
+      font-family: SF Pro Display;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    a {
+      color: var(--unnamed, #2F3035);
+      opacity: .6;
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}
