@@ -1,0 +1,61 @@
+.cardTable {
+  margin-top: 56px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    color:  #2F3035;
+    font-size: 20px;
+    font-weight: 400;
+
+    &:nth-child(3) {
+      transform: translateX(-63px);
+    }
+    &:nth-child(4) {
+      transform: translateX(-212px);
+    }
+  }
+}
+
+
+.schedule {
+  &__item {
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(81, 81, 89, 0.3);
+    padding-bottom: 30px;
+
+    &_text {
+      color: #2F3035;
+      font-size: 16px;
+      font-weight: 400;
+      opacity: .7;
+    }
+
+    &_box {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      width: 155px;
+      align-content: center;
+      &_1 {
+        display: flex;
+        justify-content: space-between;
+
+      }
+
+      &_2 {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 211px;
+    }
+  }
+}

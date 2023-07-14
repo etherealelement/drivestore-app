@@ -9,6 +9,7 @@ export const Button: FC<ButtonProps> = ({size, type,className, children,border, 
         [styles.buttonSmall]: size === "small",
         [styles.buttonSubmit]: type === "submit",
         [styles.buttonBtn]: type === "button",
+        [styles.buttonSmall__large]: size === "small-large",
         [styles.buttonBorder]: border,
     })} {...props}>{children}</button>;
 };
