@@ -1,0 +1,30 @@
+.cardFilter {
+  margin-top: 56px;
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 981px;
+  }
+
+
+  &__shop {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    &_title{
+      color:  #2F3035;
+      font-size: 17px;
+      opacity: 0.7;
+    }
+
+  }
+
+  &__check {
+    display: flex;
+    justify-content: space-between;
+    gap: 54px;
+  }
+}

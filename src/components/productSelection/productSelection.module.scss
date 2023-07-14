@@ -59,8 +59,10 @@
     a {
       color: var(--unnamed, #2F3035);
       opacity: .6;
+      padding-bottom: 2px;
       &:focus {
         opacity: 1;
+        border-bottom: 3px solid #1C62CD;
       }
     }
   }
