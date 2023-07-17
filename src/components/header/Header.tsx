@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import {FC, useContext} from 'react';
 import styles from "./Header.module.scss"
 import "../../utils/helpers/styles/normalize.scss"
 import "../../utils/helpers/styles/style.scss";
@@ -8,11 +8,14 @@ import {UserFavorites} from "../ui/userContentBar/UserFavorites.tsx";
 import {UserHome} from "../ui/userContentBar/UserHome.tsx";
 import {UserCart} from "../ui/userContentBar/UserCart.tsx";
 import {Link} from "react-router-dom";
+import {CountContext} from "../../context/homeContext.ts";
 
 
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
 
 export const Header: FC = () => {
+    const state = useContext(CountContext)
+
     return <header className={styles.header}>
         <div className="container">
             <div className={styles.header__top}>
@@ -51,7 +54,7 @@ export const Header: FC = () => {
                         </li>
                         <li className={styles.header__user_item}>
                             <Link to="/" className={styles.header__user_item_link}>
-                                <span>1</span>
+                                <span>{state.count}</span>
                                 <UserCart></UserCart>
                             </Link>
                         </li>

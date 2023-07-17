@@ -10,23 +10,37 @@ import {popularProduct} from "../utils/data/productArray.ts";
 import {navArr} from "../utils/data/productArray.ts";
 import {popularProduct2} from "../utils/data/productArray.ts";
 import {Footer} from "../components/footer/Footer.tsx";
+import {CountContext, CountContextDispatch} from "../context/homeContext.ts";
+import {useReducer} from "react";
+import {countReducer} from "../store/homeStore/homeStore.ts";
+import {initialCount} from "../store/homeStore/homeStore.ts";
+
+// state management
+
+
 
 
 function Home() {
+    const [count, dispatch] = useReducer(countReducer, initialCount)
+
     return (
         <>
-            <Header></Header>
-            <main>
-                <Banner></Banner>
-                <Search></Search>
-                <Categories></Categories>
-                <PopularProduct ProductData={popularProduct} title={"Популярные товары"} navData={navArr}></PopularProduct>
-                <Sales></Sales>
-                <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
-                <Footer></Footer>
-            </main>
+            <CountContext.Provider value={count}>
+                <CountContextDispatch.Provider value={dispatch}>
+                    <Header></Header>
+                    <main>
+                        <Banner></Banner>
+                        <Search></Search>
+                        <Categories></Categories>
+                        <PopularProduct ProductData={popularProduct} title={"Популярные товары"} navData={navArr}></PopularProduct>
+                        <Sales></Sales>
+                        <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
+                        <Footer></Footer>
+                    </main>
+                </CountContextDispatch.Provider>
+            </CountContext.Provider>
         </>
     )
 }
 
-export default Home
+export default Home;

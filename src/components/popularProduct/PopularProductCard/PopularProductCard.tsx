@@ -1,4 +1,4 @@
-import {FC, useState} from 'react';
+import {FC, useContext, useState} from 'react';
 import {PopularProductCardProps} from "./PopularProductCard.props.ts";
 import styles from "./PopularProductCard.module.scss";
 import {FavActive} from "../../ui/favicons/FavActive.tsx";
@@ -6,6 +6,7 @@ import {FavDisable} from "../../ui/favicons/FavDisable.tsx";
 import {CardIconActive} from "../../ui/cardIcon/CardIconActive.tsx";
 import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
+import {CountContextDispatch} from "../../../context/homeContext.ts";
 
 export const PopularProductCard: FC<PopularProductCardProps> = ({
                                                                     children,
@@ -14,14 +15,22 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({
                                                                     message,
                                                                     sale
                                                                 }: PopularProductCardProps): JSX.Element => {
+    const dispatch = useContext(CountContextDispatch);
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
+
+
 
     return <li className={styles.cardItem}>
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={() => setActiveFav(!activeFav)}>
+        <button className={styles.cardItem__fav} onClick={() => {
+            setActiveFav(!activeFav)
+            dispatch({
+                type: "incr",
+            })
+        }}>
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 
@@ -44,7 +53,9 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({
             }
 
         </div>
-        {price ? <button className={styles.cardItem__btn} onClick={() => setActiveProduct(!activeProduct)}>
+        {price ? <button className={styles.cardItem__btn} onClick={() => {
+            setActiveProduct(!activeProduct)
+        }}>
             {activeProduct ? <CardIconActive/> : <CardIconDisable/>}
         </button> : null}
     </li>
