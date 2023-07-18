@@ -13,15 +13,10 @@ import {Footer} from "../components/footer/Footer.tsx";
 import {CountContext, CountContextDispatch} from "../context/homeContext.ts";
 import {useReducer} from "react";
 import {countReducer} from "../store/homeStore/homeStore.ts";
-import {initialCount} from "../store/homeStore/homeStore.ts";
-
-// state management
-
-
-
+import {cartItems} from "../store/homeStore/homeStore.ts";
 
 function Home() {
-    const [count, dispatch] = useReducer(countReducer, initialCount)
+    const [count, dispatch] = useReducer(countReducer, cartItems)
 
     return (
         <>

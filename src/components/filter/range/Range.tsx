@@ -11,13 +11,16 @@ export const Range: FC = (): JSX.Element => {
   
 	// Changing State when volume increases/decreases
 	const handleChange = (e: Event, data: number[]): void => {
-		const newArr:number[] = data.map(item => item);
+		const newArr = data.map(item => item);
 		setValue(newArr)
 	}
 
-	const handleArrow = ():void => {
+	const handleArrow = () => {
 		setArrow(!arrow);
 	};
+
+
+
 
 	return (
 		<>
@@ -36,21 +39,15 @@ export const Range: FC = (): JSX.Element => {
 						width: "fit-content",
 					}}
 				>
+					<Typography id="range-slider" gutterBottom>
+						Select Price Range:
+					</Typography>
 					<Slider
 						getAriaLabel={() => 'Temperature range'}
 						value={value}
 						onChange={handleChange}
+						valueLabelDisplay="auto"
 					/>
-					<Typography id="range-slider" gutterBottom className={styles.price__range}>
-						<span className={styles.price__range_spn}>
-							<p className={styles.price__range_text}>От</p>
-							<p className={styles.price__range_text}>{value[0] * 10000}</p>
-						</span>
-						<span className={styles.price__range_spn}>
-							<p className={styles.price__range_text}>До</p>
-							<p className={styles.price__range_text}>{value[1] * 10000}</p>
-						</span>
-					</Typography>
 				</div>
 			) : null}
 		</>

@@ -53,8 +53,8 @@ export const Header: FC = () => {
                             </Link>
                         </li>
                         <li className={styles.header__user_item}>
-                            <Link to="/" className={styles.header__user_item_link}>
-                                <span>{state.count}</span>
+                            <Link to="/cart" className={styles.header__user_item_link}>
+                                <span>{state.length}</span>
                                 <UserCart></UserCart>
                             </Link>
                         </li>

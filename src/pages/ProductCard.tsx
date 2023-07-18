@@ -22,10 +22,5 @@ export const ProductCard: FC = () => {
         <CardTable></CardTable>
         <PopularProduct title={"С этим товаром покупают"} navData={navArr} ProductData={popularProduct2}></PopularProduct>
         <Footer></Footer>
-
-
-
-
-
     </div>;
 };
