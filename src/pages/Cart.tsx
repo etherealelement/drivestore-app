@@ -6,7 +6,7 @@ import {countReducer, cartItems} from "../store/homeStore/homeStore.ts";
 import {CartList} from "../components/cartList/cartList.tsx";
 
 export const Cart: FC = () => {
-    const [count, dispatch] = useReducer(countReducer, cartItems)
+    const [count, dispatch] = useReducer<any>(countReducer, cartItems)
 
     return <div>
         <CountContext.Provider value={count}>
