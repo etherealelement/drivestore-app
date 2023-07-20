@@ -61,4 +61,13 @@
   &Border {
     border-radius: 3px;
   }
+
+  &Red {
+    color: white;
+    background-color: #f52525;
+
+    &:hover {
+      background-color: rgba(234, 36, 36, 0.7);
+    }
+  }
 }

@@ -9,7 +9,13 @@ export const CartList: FC = () => {
     return <section className={styles.cart}>
         <div className="container">
             <div className={styles.cartInner}>
-                {cart.map((item: any) => <CartItems key={item.key} title={item.title} image={item.image} category={item.category}></CartItems>)}
+                {cart.map((item: any) => <CartItems
+                    key={item.key}
+                    title={item.title}
+                    image={item.image}
+                    category={item.category}
+                    price={item.price}
+                ></CartItems>)}
             </div>
         </div>
     </section>
