@@ -19,7 +19,7 @@ export const CartItems: FC<CartItemsProps> = ({category, image, title, price}: C
             </div>
             <div className={styles.item__buy}>
                 <Button type={"button"} border={true} size={"small-large"}>Перейти к оплате</Button>
-                <Button type={"button"} border={true} size={"small-large"} remove={"red"}>Удалить</Button>
+                <Button type={"button"} border={true} size={"small-large"} remove={true}>Удалить</Button>
             </div>
         </div>
     </li>;
