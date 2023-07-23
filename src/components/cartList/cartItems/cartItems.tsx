@@ -13,17 +13,16 @@ export const CartItems: FC<CartItemsProps> = ({category, image, title, price}: C
                     <p className={styles.item__category}>{category}</p>
                     <span className={styles.item__price}>{price === "" ? "Нет в наличии" : price}</span>
                 </div>
+
+
+
+                
             </div>
             <div className={styles.item__price}>
-
+                    
             </div>
             <div className={styles.item__buy}>
                 <Button type={"button"} border={true} size={"small-large"}>Перейти к оплате</Button>
-
-
-
-
-
                 <Button type={"button"} border={true} size={"small-large"} remove={true}>Удалить</Button>
             </div>
         </div>
