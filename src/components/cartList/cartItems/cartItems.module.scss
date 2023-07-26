@@ -32,4 +32,24 @@
     align-items: center;
     gap: 20px;
   }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &_span {
+      width: 10px;
+    }
+
+
+    &_svg {
+      background: inherit;
+      border: none;
+      transition: all .3s;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
 }

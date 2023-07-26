@@ -9,8 +9,8 @@ export const CartList: FC = () => {
     return <section className={styles.cart}>
         <div className="container">
             <div className={styles.cartInner}>
-                {cart.map((item: any) => <CartItems
-                    key={item.key}
+                {cart.map((item: any, index: any) => <CartItems
+                    key={index}
                     title={item.title}
                     image={item.image}
                     category={item.category}

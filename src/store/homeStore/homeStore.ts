@@ -27,7 +27,7 @@ export const cartItems = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-2.png',
         title: "Garmin Echomap Plus 62cv",
-        price: "45 800",
+        price: 45800,
         sale: true,
     },
     {
@@ -44,7 +44,7 @@ export const cartItems = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
 ]
