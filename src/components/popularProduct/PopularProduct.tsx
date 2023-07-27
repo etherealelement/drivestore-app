@@ -77,9 +77,6 @@ export const PopularProduct: FC<PopularProductProps> = ({ProductData, title, nav
                     }}
                 >
 
-
-
-
                     <ul>
                         {ProductData.map((item, index) => <SwiperSlide
                             className="swiper-slide_product"
