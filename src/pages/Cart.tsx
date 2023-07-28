@@ -14,6 +14,9 @@ export const Cart: FC = () => {
                 <Header></Header>
                 <CartList></CartList>
                 <Footer></Footer>
+
+
+                
             </CountContextDispatch.Provider>
         </CountContext.Provider>
     </div>;
