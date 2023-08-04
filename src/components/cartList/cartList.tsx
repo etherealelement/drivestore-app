@@ -4,8 +4,7 @@ import {CartItems} from "./cartItems/cartItems.tsx";
 import {CountContext} from "../../context/homeContext.ts";
 
 export const CartList: FC = () => {
-    const cart = useContext(CountContext)
-    console.log(cart)
+    const cart = useContext(CountContext);
     return <section className={styles.cart}>
         <div className="container">
             <div className={styles.cartInner}>

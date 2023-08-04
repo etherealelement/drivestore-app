@@ -7,30 +7,54 @@ import {CardIconActive} from "../../ui/cardIcon/CardIconActive.tsx";
 import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
 import {CountContextDispatch} from "../../../context/homeContext.ts";
+import {carts} from "../../../store/homeStore/homeStore.ts";
 
-export const PopularProductCard: FC<PopularProductCardProps> = ({
+export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
                                                                     children,
                                                                     price,
                                                                     image,
                                                                     message,
                                                                     sale
                                                                 }: PopularProductCardProps): JSX.Element => {
-    const dispatch = useContext(CountContextDispatch);
+    const dispatch = useContext(CountContextDispatch)
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
 
+    // addToCart
+
+    const addToCart = () => {
+        dispatch({
+            type: "addItem",
+
+            payload: {
+                id: itemId,
+                title: children,
+                price: price,
+                image: image,
+                sale: sale,
+                message: message,
+            }
+        })
+
+        const payload =  {
+            id: itemId,
+                title: children,
+                price: price,
+                image: image,
+                sale: sale,
+                message: message,
+        }
+        carts.push(payload)
+        setActiveFav(!activeFav);
+    }
 
 
+    // Dispatchers
     return <li className={styles.cardItem}>
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={() => {
-            setActiveFav(!activeFav)
-            dispatch({
-                type: "incr",
-            })
-        }}>
+        <button className={styles.cardItem__fav} onClick={addToCart} >
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 

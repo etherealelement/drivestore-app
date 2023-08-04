@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid gray;
-
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 20px;
 
   &__info {
     display: flex;

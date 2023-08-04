@@ -5,16 +5,16 @@ import {Breadcrumbs} from "../components/breadcrumbs/Breadcrumbs.tsx";
 import {Pagination} from "../components/pagination/Pagination.tsx";
 import {ProductContent} from "../components/productContent/productContent.tsx";
 import {catalogData} from "../utils/data/productArray.ts";
-import {countReducer, cartItems} from "../store/homeStore/homeStore.ts";
+import {cartReducer, carts} from "../store/homeStore/homeStore.ts";
 import {CountContextDispatch, CountContext} from "../context/homeContext.ts";
 
 
 export const Catalog: FC = () => {
 
-    const [count, dispatch] = useReducer(countReducer, cartItems)
+    const [cart, dispatch] = useReducer(cartReducer, carts)
 
     return <>
-    <CountContext.Provider value={count}>
+    <CountContext.Provider value={cart}>
         <CountContextDispatch.Provider value={dispatch}>
             <Header></Header>
             <main>

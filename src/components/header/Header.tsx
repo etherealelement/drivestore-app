@@ -14,7 +14,7 @@ import {CountContext} from "../../context/homeContext.ts";
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
 
 export const Header: FC = () => {
-    const state = useContext(CountContext)
+    const cart = useContext(CountContext)
 
     return <header className={styles.header}>
         <div className="container">
@@ -54,7 +54,7 @@ export const Header: FC = () => {
                         </li>
                         <li className={styles.header__user_item}>
                             <Link to="/cart" className={styles.header__user_item_link}>
-                                <span>{state.length}</span>
+                                <span>{cart.length}</span>
                                 <UserCart></UserCart>
                             </Link>
                         </li>
