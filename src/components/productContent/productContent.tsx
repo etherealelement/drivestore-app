@@ -1,4 +1,4 @@
-import {FC, useContext} from 'react';
+import {FC} from 'react';
 import styles from "./productContent.module.scss";
 import {ProductContentProps} from "./productContent.props.ts";
 import {PopularProductCard} from "../popularProduct/PopularProductCard/PopularProductCard.tsx";

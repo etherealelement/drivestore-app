@@ -10,11 +10,12 @@ import {UserCart} from "../ui/userContentBar/UserCart.tsx";
 import {Link} from "react-router-dom";
 import {CountContext} from "../../context/homeContext.ts";
 
-
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
 
 export const Header: FC = () => {
+
     const cart = useContext(CountContext)
+
 
     return <header className={styles.header}>
         <div className="container">

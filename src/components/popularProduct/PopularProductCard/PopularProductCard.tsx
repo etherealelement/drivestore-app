@@ -1,4 +1,4 @@
-import {FC, useContext, useState} from 'react';
+import {FC, useState} from 'react';
 import {PopularProductCardProps} from "./PopularProductCard.props.ts";
 import styles from "./PopularProductCard.module.scss";
 import {FavActive} from "../../ui/favicons/FavActive.tsx";
@@ -6,8 +6,8 @@ import {FavDisable} from "../../ui/favicons/FavDisable.tsx";
 import {CardIconActive} from "../../ui/cardIcon/CardIconActive.tsx";
 import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
-import {CountContextDispatch} from "../../../context/homeContext.ts";
 import {carts} from "../../../store/homeStore/homeStore.ts";
+
 
 export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
                                                                     children,
@@ -16,36 +16,25 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
                                                                     message,
                                                                     sale
                                                                 }: PopularProductCardProps): JSX.Element => {
-    const dispatch = useContext(CountContextDispatch)
+
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
+
+    // const dispatch = useContext(CountContextDispatch)
 
     // addToCart
 
     const addToCart = () => {
-        dispatch({
-            type: "addItem",
-
-            payload: {
-                id: itemId,
-                title: children,
-                price: price,
-                image: image,
-                sale: sale,
-                message: message,
-            }
-        })
-
-        const payload =  {
+        const payload = {
             id: itemId,
-                title: children,
-                price: price,
-                image: image,
-                sale: sale,
-                message: message,
+            title: children,
+            image: image,
+            category: message,
+            price: price,
         }
-        carts.push(payload)
-        setActiveFav(!activeFav);
+        carts.push(payload);
+        localStorage.setItem("cart", JSON.stringify(carts))
+        setActiveProduct(!activeProduct)
     }
 
 
@@ -54,7 +43,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={addToCart} >
+        <button className={styles.cardItem__fav} onClick={() => setActiveFav(() => !activeFav)} >
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 
@@ -77,9 +66,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
             }
 
         </div>
-        {price ? <button className={styles.cardItem__btn} onClick={() => {
-            setActiveProduct(!activeProduct)
-        }}>
+        {price ? <button className={styles.cardItem__btn} onClick={addToCart}>
             {activeProduct ? <CardIconActive/> : <CardIconDisable/>}
         </button> : null}
     </li>

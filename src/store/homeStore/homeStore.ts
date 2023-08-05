@@ -1,24 +1,24 @@
+import {CartStateInterface} from "./interfaces/cartStateInterface.ts";
+import {CartActionType} from "./interfaces/cartActionInterface.ts";
 
-export  const carts = ([]);
+export const cartsShop = [
 
-localStorage.setItem("cart", JSON.stringify(carts));
-export const cartReducer = (state: any, action: any) => {
+];
+
+export const cartReducer = (state: CartStateInterface, action: CartActionType) => {
     console.log(state)
     switch (action.type) {
         case "addItem": {
             return [
                 ...state,
-                {
-                    ...action.payload
-                }
+                state.push(action.payload)
             ]
         }
 
     }
 }
 
-// Добавление в локалстор
-// Извлечение из стора
-export const cartItems = JSON.parse(window.localStorage.getItem("cart"))
+export const carts = JSON.parse(window.localStorage.getItem("cart"));
+export const cartItem= localStorage.setItem("cart", JSON.stringify(cartsShop));
 
 
