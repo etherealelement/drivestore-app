@@ -5,7 +5,6 @@ import {CountContextDispatch, CountContext} from "../context/homeContext.ts";
 import {cartReducer, carts} from "../store/homeStore/homeStore.ts";
 import {CartList} from "../components/cartList/cartList.tsx";
 
-
 export const Cart: FC = () => {
     const [cart, dispatch] = useReducer(cartReducer, carts)
 
@@ -15,6 +14,7 @@ export const Cart: FC = () => {
                 <Header></Header>
                 <CartList></CartList>
                 <Footer></Footer>
+
             </CountContextDispatch.Provider>
         </CountContext.Provider>
     </div>;

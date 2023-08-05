@@ -2,6 +2,7 @@ import {FC, useContext} from 'react';
 import styles from "./cartList.module.scss";
 import {CartItems} from "./cartItems/cartItems.tsx";
 import {CountContext} from "../../context/homeContext.ts";
+import {EmtyCart} from "./emtyCart/EmtyCart.tsx";
 
 export const CartList: FC = () => {
     const cart = useContext(CountContext);
@@ -17,5 +18,6 @@ export const CartList: FC = () => {
                 ></CartItems>)}
             </div>
         </div>
+        <EmtyCart></EmtyCart>
     </section>
 };
