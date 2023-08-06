@@ -6,8 +6,8 @@ import {Pagination} from "../components/pagination/Pagination.tsx";
 import {ProductContent} from "../components/productContent/productContent.tsx";
 import {catalogData} from "../utils/data/productArray.ts";
 import {CountContextDispatch, CountContext} from "../context/homeContext.ts";
-import {cartReducer, carts} from "../store/homeStore/homeStore.ts";
-
+import { carts} from "../store/homeStore/homeStore.ts";
+import {cartReducer} from "../store/homeStore/reducers.ts";
 
 
 export const Catalog: FC = () => {

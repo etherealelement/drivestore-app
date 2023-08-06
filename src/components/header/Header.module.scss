@@ -16,6 +16,23 @@
     gap: 10px;
     margin-right: 20px;
     &_item {
+
+      &_fav {
+        position: relative;
+        font-size: 10px;
+        color: #ffffff;
+        span {
+          padding: 4px 8px;
+          border-radius: 50%;
+          background: #1C62CD;
+          position: absolute;
+          top: -20px;
+          right: -13px;
+        }
+      }
+
+
+
       &_link {
         position: relative;
         text-decoration: none;
@@ -37,6 +54,8 @@
           color: #FFFFFF;
         }
       }
+
+
 
 
 
@@ -74,6 +93,7 @@
             color: #505050;
             border-bottom: 3px #1C62CD;
           }
+
 
           &_link {
             position: absolute;

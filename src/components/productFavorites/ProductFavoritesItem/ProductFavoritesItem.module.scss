@@ -1,0 +1,29 @@
+.favItem {
+  border: 1px solid #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &__spn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+
+  &__title {
+    text-align: center;
+    width: 200px;
+  }
+
+  &__price {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+  }
+}

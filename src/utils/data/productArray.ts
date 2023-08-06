@@ -21,7 +21,7 @@ export const popularProduct:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-2.png',
         title: "Garmin Echomap Plus 62cv",
-        price: "45 800",
+        price: 45800,
         sale: true,
     },
     {
@@ -38,7 +38,7 @@ export const popularProduct:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
     {
@@ -46,7 +46,7 @@ export const popularProduct:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
     {
@@ -63,7 +63,7 @@ export const popularProduct:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-2.png',
         title: "Garmin Echomap Plus 62cv",
-        price: "45 800",
+        price: 46899,
         sale: true,
     },
     {
@@ -80,7 +80,7 @@ export const popularProduct:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
 ]
@@ -102,7 +102,7 @@ export const popularProduct2:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-2.png',
         title: "Garmin Echomap Plus 62cv",
-        price: "45 800",
+        price: 45800,
         sale: true,
     },
     {
@@ -119,7 +119,7 @@ export const popularProduct2:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
     {
@@ -127,7 +127,7 @@ export const popularProduct2:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
     {
@@ -144,7 +144,7 @@ export const popularProduct2:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-2.png',
         title: "Garmin Echomap Plus 62cv",
-        price: "45 800",
+        price: 45800,
         sale: true,
     },
     {
@@ -161,7 +161,7 @@ export const popularProduct2:ProductData = [
         category: "электроника",
         image: 'src/assets/popularProductSale/image-4.png',
         title: "Мужской костюм 3мм",
-        price: "7 000",
+        price: 7000,
         sale: false,
     },
 ]
@@ -174,7 +174,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-1.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -182,7 +182,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-2.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: true,
     },
     {
@@ -190,7 +190,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-3.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -198,7 +198,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-4.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -206,7 +206,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-5.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -214,7 +214,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-6.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -222,7 +222,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-7.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -239,7 +239,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-9.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -247,7 +247,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-10.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -255,7 +255,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-11.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
     {
@@ -263,7 +263,7 @@ export const catalogData:ProductData = [
         category: "гидроциклы",
         image: 'src/assets/catalogData/image-card-12.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
-        price: "1 049 500",
+        price: 1049500,
         sale: false,
     },
 

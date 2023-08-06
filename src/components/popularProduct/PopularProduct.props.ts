@@ -10,7 +10,7 @@ export type ProductData = [
         category: string;
         image: string,
         title: string,
-        price: string,
+        price: number | string,
         message?: string,
         sale: boolean,
     }

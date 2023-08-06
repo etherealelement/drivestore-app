@@ -6,7 +6,7 @@ import {FavDisable} from "../../ui/favicons/FavDisable.tsx";
 import {CardIconActive} from "../../ui/cardIcon/CardIconActive.tsx";
 import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
-import {carts} from "../../../store/homeStore/homeStore.ts";
+import {carts, favorites} from "../../../store/homeStore/homeStore.ts";
 
 
 export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
@@ -22,8 +22,25 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
 
     // const dispatch = useContext(CountContextDispatch)
 
-    // addToCart
+    // addToFavorites
 
+    const addToFavorites = () => {
+      const fav = {
+            id: itemId,
+            title: children,
+            image: image,
+            category: message,
+            price: price,
+        }
+        favorites.push(fav);
+        localStorage.setItem("favorites", JSON.stringify(favorites))
+        setActiveFav(!activeFav);
+    }
+
+
+
+
+    // addToCart
     const addToCart = () => {
         const payload = {
             id: itemId,
@@ -43,7 +60,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={() => setActiveFav(() => !activeFav)} >
+        <button className={styles.cardItem__fav} onClick={addToFavorites}>
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 

@@ -19,13 +19,12 @@ export const CartItems: FC<CartItemsProps> = ({
 
 
 	const handleIncrement = () => {
-		setTotalCount(e => Number(e) + price)
+		setTotalCount(price + price)
 		setCount((e) => e + 1);
 	};
 
 	const handleDecrement = () => {
-		setTotalCount(e => Number(e) - Number(price) <= 0 ? price : Number(e) - Number(price))
-		setCount((e) => e === 0 ? e - 1 : 1);
+
 	};
 
 	return (
@@ -38,7 +37,7 @@ export const CartItems: FC<CartItemsProps> = ({
 						<h2 className={styles.title}>{title}</h2>
 						<p className={styles.item__category}>{category}</p>
 						<span className={styles.item__price}>
-							{price === "" ? "Нет в наличии" : price}
+							<b>Стоимость: {price === "" ? "Нет в наличии" : price}₽</b>
 						</span>
 					</div>
 				</div>
@@ -58,7 +57,7 @@ export const CartItems: FC<CartItemsProps> = ({
 
 				<div className={styles.item__total}>
 					<span className={styles.item__total_span}>
-						{price ? `Итого: ${totalCount}` : null}
+						<b>{price ? `Итого: ${totalCount}` : null}</b>
 					</span>
 				</div>
 

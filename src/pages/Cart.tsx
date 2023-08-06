@@ -4,7 +4,8 @@ import {Footer} from "../components/footer/Footer.tsx";
 import {CountContextDispatch, CountContext} from "../context/homeContext.ts";
 
 import {CartList} from "../components/cartList/cartList.tsx";
-import {cartReducer, carts} from "../store/homeStore/homeStore.ts";
+import {carts} from "../store/homeStore/homeStore.ts";
+import {cartReducer} from "../store/homeStore/reducers.ts";
 
 export const Cart: FC = () => {
     const [cart, dispatch] = useReducer(cartReducer, carts);

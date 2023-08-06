@@ -6,6 +6,15 @@
   border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: all .3s;
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  .title {
+    font-size: 15px;
+    max-width: 150px;
+  }
 
   &__info {
     display: flex;

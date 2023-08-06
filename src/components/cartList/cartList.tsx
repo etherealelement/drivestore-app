@@ -19,6 +19,6 @@ export const CartList: FC = () => {
                 ></CartItems>)}
             </div>
         </div>
-        <EmtyCart></EmtyCart>
+        <EmtyCart>Ваша корзина пуста</EmtyCart>
     </section>
 };

@@ -12,8 +12,8 @@ import {popularProduct2} from "../utils/data/productArray.ts";
 import {Footer} from "../components/footer/Footer.tsx";
 import {CountContext, CountContextDispatch} from "../context/homeContext.ts";
 import {useReducer} from "react";
-import {cartReducer, carts} from "../store/homeStore/homeStore.ts";
-
+import { carts} from "../store/homeStore/homeStore.ts";
+import {cartReducer} from "../store/homeStore/reducers.ts";
 function Home() {
     const [cart, dispatch] = useReducer(cartReducer, carts);
 
