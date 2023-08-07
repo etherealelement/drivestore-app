@@ -10,17 +10,16 @@ import {popularProduct} from "../utils/data/productArray.ts";
 import {navArr} from "../utils/data/productArray.ts";
 import {popularProduct2} from "../utils/data/productArray.ts";
 import {Footer} from "../components/footer/Footer.tsx";
-import {CountContext, CountContextDispatch} from "../context/homeContext.ts";
-import {useReducer} from "react";
-import { carts} from "../store/homeStore/homeStore.ts";
-import {cartReducer} from "../store/homeStore/reducers.ts";
+import {CountContext} from "../context/homeContext.ts";
+import {useSelector} from "react-redux";
+
 function Home() {
-    const [cart, dispatch] = useReducer(cartReducer, carts);
+
+    const cart = useSelector(item => item.cart.cart)
 
     return (
         <>
             <CountContext.Provider value={cart}>
-                <CountContextDispatch.Provider value={dispatch}>
                     <Header></Header>
                     <main>
                         <Banner></Banner>
@@ -31,7 +30,6 @@ function Home() {
                         <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
                         <Footer></Footer>
                     </main>
-                </CountContextDispatch.Provider>
             </CountContext.Provider>
         </>
     )

@@ -6,8 +6,8 @@ import {FavDisable} from "../../ui/favicons/FavDisable.tsx";
 import {CardIconActive} from "../../ui/cardIcon/CardIconActive.tsx";
 import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
-import {favorites} from "../../../store/homeStore/homeStore.ts";
-import {addToCart} from "../../../store/homeStore/homeStore.ts";
+import {useDispatch} from "react-redux";
+import {addCartItem} from "../../../store/slices/cartSlice.ts";
 
 export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
                                                                     title,
@@ -21,24 +21,23 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
 
-    // const dispatch = useContext(CountContextDispatch)
-    const addCart = () => {
-        setActiveProduct(!activeProduct)
-        addToCart(itemId, category, image, title, price, message, sale)
-    }
-    // addToFavorites
+    const dispatch = useDispatch()
 
-    const addToFavorites = () => {
-      const fav = {
+
+
+    const addCart = () => {
+        dispatch(addCartItem({
             id: itemId,
             title: title,
-            image: image,
-            category: message,
             price: price,
-        }
-        favorites.push(fav);
-        localStorage.setItem("favorites", JSON.stringify(favorites))
-        setActiveFav(!activeFav);
+            image: image,
+            message: message,
+            sale: sale,
+            category: category,
+        }))
+
+        setActiveProduct(!activeProduct)
+
     }
 
 
@@ -47,7 +46,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={addToFavorites}>
+        <button className={styles.cardItem__fav} onClick={() => setActiveFav(!activeFav)}>
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 

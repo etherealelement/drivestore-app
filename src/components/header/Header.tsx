@@ -9,7 +9,6 @@ import {UserHome} from "../ui/userContentBar/UserHome.tsx";
 import {UserCart} from "../ui/userContentBar/UserCart.tsx";
 import {Link} from "react-router-dom";
 import {CountContext} from "../../context/homeContext.ts";
-import {favorites} from "../../store/homeStore/homeStore.ts";
 
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
 
@@ -46,7 +45,7 @@ export const Header: FC = () => {
                     <ul className={styles.header__user}>
                         <li className={styles.header__user_item}>
                             <Link to="/favorites" className={styles.header__user_item_fav}>
-                                <span>{favorites.length}</span>
+                                {/*<span>{favorites.length}</span>*/}
                                 <UserFavorites></UserFavorites>
                             </Link>
                         </li>

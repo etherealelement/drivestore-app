@@ -4,7 +4,7 @@ import styles from "./cartItems.module.scss";
 import { Button } from "../../ui/Button/Button.tsx";
 import PlusIcon from "../../../assets/svgicons/plus.svg";
 import MinysIcon from "../../../assets/svgicons/minus.svg"
-import {removeCartItem} from "../../../store/homeStore/homeStore.ts";
+
 
 
 export const CartItems: FC<CartItemsProps> = ({
@@ -76,11 +76,9 @@ export const CartItems: FC<CartItemsProps> = ({
 						border={true}
 						size={"small-large"}
 						remove={true}
-						onClick={() => removeCartItem(itemId)}
 					>
 						Удалить
 					</Button>
-					<button onClick={() => removeCartItem(itemId)}>Удалить</button>
 				</div>
 			</div>
 		</li>
