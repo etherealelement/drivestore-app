@@ -11,6 +11,9 @@ export const CartList: FC = () => {
         <div className="container">
             <div className={styles.cartInner}>
                 {cart.map((item: any, index: any) => <CartItems
+                    message={item.message}
+                    sale={item.sale}
+                    itemId={item.id}
                     key={index}
                     title={item.title}
                     image={item.image}

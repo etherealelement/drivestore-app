@@ -4,9 +4,11 @@ import styles from "./cartItems.module.scss";
 import { Button } from "../../ui/Button/Button.tsx";
 import PlusIcon from "../../../assets/svgicons/plus.svg";
 import MinysIcon from "../../../assets/svgicons/minus.svg"
+import {removeCartItem} from "../../../store/homeStore/homeStore.ts";
 
 
 export const CartItems: FC<CartItemsProps> = ({
+	itemId,
 	category,
 	image,
 	title,
@@ -15,17 +17,20 @@ export const CartItems: FC<CartItemsProps> = ({
 	const [count, setCount] = useState<number>(1);
 	const [totalCount, setTotalCount] = useState<number | string>(price);
 
-	console.log(totalCount)
 
 
 	const handleIncrement = () => {
-		setTotalCount(price + price)
+		setTotalCount(e => e + price)
 		setCount((e) => e + 1);
 	};
 
 	const handleDecrement = () => {
-
+		setTotalCount(e => e === 0 ? e: e - 1)
+		setCount(e =>  e === 1 ? 1 : e - 1)
 	};
+
+
+
 
 	return (
 		<li className={styles.item}>
@@ -71,9 +76,11 @@ export const CartItems: FC<CartItemsProps> = ({
 						border={true}
 						size={"small-large"}
 						remove={true}
+						onClick={() => removeCartItem(itemId)}
 					>
 						Удалить
 					</Button>
+					<button onClick={() => removeCartItem(itemId)}>Удалить</button>
 				</div>
 			</div>
 		</li>

@@ -82,8 +82,9 @@ export const PopularProduct: FC<PopularProductProps> = ({ProductData, title, nav
                             className="swiper-slide_product"
                         key={index}>
                             {item.category === event ?  <PopularProductCard
+                                category={item.category}
                                 itemId={item.id}
-                                children={item.title}
+                                title={item.title}
                                 price={item.price}
                                 image={item.image}
                                 message={item.message}

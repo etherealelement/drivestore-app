@@ -1,9 +1,11 @@
 import {DetailedHTMLProps, HTMLAttributes} from "react";
 
 export interface CartItemsProps extends DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> {
-    category: string;
-    image: string;
-    title: string;
-    sale?: boolean;
-    price: string;
+    itemId: number,
+    category: string,
+    image: string,
+    title: string,
+    price: string | number,
+    message: string,
+    sale?: boolean,
 }

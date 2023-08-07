@@ -1,10 +1,11 @@
-import {DetailedHTMLProps, HTMLAttributes, ReactNode} from "react";
+import {DetailedHTMLProps, HTMLAttributes} from "react";
 
 export interface PopularProductCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> {
     itemId: number;
     image: string;
-    children: ReactNode;
+    title: string;
     price?: string | boolean;
     message?: string;
     sale?: boolean
+    category: string,
 }
