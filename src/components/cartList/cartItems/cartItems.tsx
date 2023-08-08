@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+ import { FC, useState } from "react";
 import { CartItemsProps } from "./cartItems.props.ts";
 import styles from "./cartItems.module.scss";
 import { Button } from "../../ui/Button/Button.tsx";

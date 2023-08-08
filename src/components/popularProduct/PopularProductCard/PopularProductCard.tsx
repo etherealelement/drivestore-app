@@ -8,6 +8,8 @@ import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {addCartItem} from "../../../store/slices/cartSlice.ts";
+import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
+import {addFavorites} from "../../../store/slices/favoritesSlice.ts";
 
 export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
                                                                     title,
@@ -22,10 +24,10 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
     const [activeProduct, setActiveProduct] = useState(false)
 
     const dispatch = useDispatch()
-
+    const deleteDispath = useDispatch()
+    const favDispath = useDispatch()
 
     // Добавление элемента в стор
-
     const addCart = () => {
         dispatch(addCartItem({
             id: itemId,
@@ -41,13 +43,34 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
 
     }
 
+    // Удаление элемента из стора
+    const deleteCart = () => {
+        deleteDispath(deleteCartItem({
+            id: itemId,
+        }))
+        setActiveProduct(!activeProduct)
+    }
 
+    // Добавление элеманта в избранное
+
+    const addToFav = () => {
+        favDispath(addFavorites({
+            id: itemId,
+            title: title,
+            price: price,
+            image: image,
+            message: message,
+            sale: sale,
+            category: category,
+        }))
+        setActiveFav(!activeFav)
+    }
 
     return <li className={styles.cardItem}>
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={() => setActiveFav(!activeFav)}>
+        <button className={styles.cardItem__fav} onClick={addToFav}>
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 
@@ -70,7 +93,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
             }
 
         </div>
-        {price ? <button className={styles.cardItem__btn} onClick={addCart}>
+        {price ? <button className={styles.cardItem__btn} onClick={!activeProduct ? addCart : deleteCart}>
             {activeProduct ? <CardIconActive/> : <CardIconDisable/>}
         </button> : null}
     </li>

@@ -10,29 +10,33 @@ import {popularProduct} from "../utils/data/productArray.ts";
 import {navArr} from "../utils/data/productArray.ts";
 import {popularProduct2} from "../utils/data/productArray.ts";
 import {Footer} from "../components/footer/Footer.tsx";
-import {CountContext} from "../context/homeContext.ts";
+import {CountContext, FavoritesContext} from "../context/homeContext.ts";
 import {useSelector} from "react-redux";
 
 function Home() {
 
     const cart = useSelector(item => item.cart.cart)
-
+    const favorites = useSelector(item => item.favorites.favorites)
     return (
         <>
             <CountContext.Provider value={cart}>
-                    <Header></Header>
-                    <main>
-                        <Banner></Banner>
-                        <Search></Search>
-                        <Categories></Categories>
-                        <PopularProduct ProductData={popularProduct} title={"Популярные товары"} navData={navArr}></PopularProduct>
-                        <Sales></Sales>
-                        <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
-                        <Footer></Footer>
-                    </main>
+                    <FavoritesContext.Provider value={favorites}>
+                        <Header></Header>
+                        <main>
+                            <Banner></Banner>
+                            <Search></Search>
+                            <Categories></Categories>
+                            <PopularProduct ProductData={popularProduct} title={"Популярные товары"} navData={navArr}></PopularProduct>
+                            <Sales></Sales>
+                            <PopularProduct ProductData={popularProduct2} title={"С этим товаром покупают"} navData={navArr}></PopularProduct>
+                            <Footer></Footer>
+                        </main>
+                    </FavoritesContext.Provider>
             </CountContext.Provider>
         </>
     )
 }
 
 export default Home;
+
+

@@ -8,14 +8,14 @@ import {UserFavorites} from "../ui/userContentBar/UserFavorites.tsx";
 import {UserHome} from "../ui/userContentBar/UserHome.tsx";
 import {UserCart} from "../ui/userContentBar/UserCart.tsx";
 import {Link} from "react-router-dom";
-import {CountContext} from "../../context/homeContext.ts";
+import {CountContext, FavoritesContext} from "../../context/homeContext.ts";
 
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
 
 export const Header: FC = () => {
 
     const cart = useContext(CountContext)
-
+    const favorites = useContext(FavoritesContext)
 
     return <header className={styles.header}>
         <div className="container">
@@ -45,7 +45,7 @@ export const Header: FC = () => {
                     <ul className={styles.header__user}>
                         <li className={styles.header__user_item}>
                             <Link to="/favorites" className={styles.header__user_item_fav}>
-                                {/*<span>{favorites.length}</span>*/}
+                                <span>{favorites.length}</span>
                                 <UserFavorites></UserFavorites>
                             </Link>
                         </li>
