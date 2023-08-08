@@ -4,7 +4,8 @@ import styles from "./cartItems.module.scss";
 import { Button } from "../../ui/Button/Button.tsx";
 import PlusIcon from "../../../assets/svgicons/plus.svg";
 import MinysIcon from "../../../assets/svgicons/minus.svg"
-
+import {useDispatch} from "react-redux";
+import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
 
 
 export const CartItems: FC<CartItemsProps> = ({
@@ -30,6 +31,15 @@ export const CartItems: FC<CartItemsProps> = ({
 	};
 
 
+	// Удаление карточки товара
+	const dispath = useDispatch()
+
+
+	const deleteCartItems = () => {
+		dispath(deleteCartItem({
+			id: itemId,
+		}))
+	}
 
 
 	return (
@@ -76,9 +86,11 @@ export const CartItems: FC<CartItemsProps> = ({
 						border={true}
 						size={"small-large"}
 						remove={true}
+						onClick={deleteCartItems}
 					>
 						Удалить
 					</Button>
+
 				</div>
 			</div>
 		</li>

@@ -7,7 +7,7 @@ const cartSlice = createSlice({
         cart: [],
     },
     reducers: {
-        addCartItem(state:CartStateInterface, action:CartActionInterface) {
+        addCartItem(state:CartStateInterface[], action:CartActionInterface) {
             state.cart.push({
                 id: action.payload.id,
                 message: action.payload.message,
@@ -19,7 +19,7 @@ const cartSlice = createSlice({
             })
         },
         deleteCartItem(state, action) {
-
+           state.cart =  state.cart.filter(item => item.id !== action.payload.id)
         },
     }
 })

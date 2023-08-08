@@ -24,6 +24,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
     const dispatch = useDispatch()
 
 
+    // Добавление элемента в стор
 
     const addCart = () => {
         dispatch(addCartItem({
