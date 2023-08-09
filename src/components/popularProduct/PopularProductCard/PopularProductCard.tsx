@@ -10,15 +10,10 @@ import {useDispatch} from "react-redux";
 import {addCartItem} from "../../../store/slices/cartSlice.ts";
 import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
 import {addFavorites} from "../../../store/slices/favoritesSlice.ts";
+import {addProductCard, deleteProductCard} from "../../../store/slices/productCardSlice.ts";
 
-export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
-                                                                    title,
-                                                                    price,
-                                                                    image,
-                                                                    message,
-                                                                    sale,
-                                                                    category,
-                                                                }: PopularProductCardProps): JSX.Element => {
+
+export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, category, image, title, price, message, sale, manufacturer, placeQuantity, powerEngine, engineType, releaseYear, rating}: PopularProductCardProps): JSX.Element => {
 
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
@@ -26,6 +21,8 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
     const dispatch = useDispatch()
     const deleteDispath = useDispatch()
     const favDispath = useDispatch()
+    const productPispatch = useDispatch()
+    const deleteCard = useDispatch()
 
     // Добавление элемента в стор
     const addCart = () => {
@@ -66,6 +63,31 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
         setActiveFav(!activeFav)
     }
 
+    // Добавление в карточку продукта
+    const addCardPage = () => {
+        productPispatch(addProductCard({
+            id: itemId,
+            message: image,
+            sale: sale,
+            title: title,
+            image: image,
+            category: category,
+            price: price,
+            manufacturer: manufacturer,
+            placeQuantity: placeQuantity,
+            powerEngine: powerEngine,
+            engineType: engineType,
+            releaseYear: releaseYear,
+            rating: rating,
+        }))
+        deleteCard(deleteProductCard({
+            id: itemId,
+        }))
+    }
+
+
+
+
     return <li className={styles.cardItem}>
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
@@ -78,7 +100,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
             <img src={image} alt="product-item"/>
 
             <Link to={"/card"}>
-                <p className={styles.cardItem__block_descr}>
+                <p className={styles.cardItem__block_descr} onClick={addCardPage}>
                     {title}
                 </p>
             </Link>

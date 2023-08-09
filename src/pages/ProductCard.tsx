@@ -8,19 +8,42 @@ import {CardFilter} from "../components/cardFilter/CardFilter.tsx";
 import {CardTable} from "../components/cardTable/CardTable.tsx";
 import {PopularProduct} from "../components/popularProduct/PopularProduct.tsx";
 import {navArr, popularProduct2} from "../utils/data/productArray.ts";
+import {ProductPageContext} from "../context/productPageContext.ts";
+import {useSelector} from "react-redux";
 
 
 const itemArr:string[] = ["О товаре", "Характеристики", "Отзывы", "Самовывоз", "Доставка", "Cервис", "Гарантия"];
 
 export const ProductCard: FC = () => {
+
+    const product = useSelector(state => state.productCard.productCard)
+
+
     return <div>
-        <Header></Header>
-        <Breadcrumbs></Breadcrumbs>
-        <CardPreview newPrice={"1 100 475 ₽"} oldPrice={"1 200 475 ₽"} rating={3}>Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</CardPreview>
-        <ProductSelection items={itemArr}></ProductSelection>
-        <CardFilter></CardFilter>
-        <CardTable></CardTable>
-        <PopularProduct title={"С этим товаром покупают"} navData={navArr} ProductData={popularProduct2}></PopularProduct>
-        <Footer></Footer>
+        <ProductPageContext.Provider value={product}>
+            <Header></Header>
+            <Breadcrumbs></Breadcrumbs>
+            {product.map((item: any) => <CardPreview
+                itemId={item.id}
+                message={item.message}
+                sale={item.sale}
+                title={item.title}
+                image={item.image}
+                category={item.category}
+                price={item.price}
+                manufacturer={item.manufacturer}
+                placeQuantity={item.placeQuantity}
+                powerEngine={item.powerEngine}
+                engineType={item.engineType}
+                releaseYear={item.releaseYear}
+                rating={item.rating}
+                key={item.id}
+            ></CardPreview>)}
+            <ProductSelection items={itemArr}></ProductSelection>
+            <CardFilter></CardFilter>
+            <CardTable></CardTable>
+            <PopularProduct title={"С этим товаром покупают"} navData={navArr} ProductData={popularProduct2}></PopularProduct>
+            <Footer></Footer>
+        </ProductPageContext.Provider>
     </div>;
 };

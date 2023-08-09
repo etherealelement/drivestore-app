@@ -1,11 +1,17 @@
 import {DetailedHTMLProps, HTMLAttributes} from "react";
 
 export interface PopularProductCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> {
-    itemId: number;
-    image: string;
-    title: string;
-    price?: string | boolean;
-    message?: string;
-    sale?: boolean
-    category: string,
+    itemId: number,
+    category: string;
+    image: string,
+    title: string,
+    price: number | string,
+    message?: string,
+    sale: boolean,
+    manufacturer: string,
+    placeQuantity: number,
+    powerEngine: number,
+    engineType: string,
+    releaseYear: number;
+    rating: number,
 }

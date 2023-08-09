@@ -8,9 +8,15 @@ export type ProductContentData = [
         category: string;
         image: string,
         title: string,
-        price: string,
+        price: number | string,
         message?: string,
         sale: boolean,
+        manufacturer: string,
+        placeQuantity: number,
+        powerEngine: number,
+        engineType: string,
+        releaseYear: number;
+        rating: number,
     }
 ]
 

@@ -1,7 +1,6 @@
-import {ChangeEvent, FC, useState} from 'react';
+import { FC, useState} from 'react';
 import styles from "./cardPreview.module.scss"
 import {CardPreviewProps} from "./cardPreview.props.ts";
-import card from "../../assets/catalogData/image-card-1.png"
 import {Box} from "@mui/material";
 import {Typography} from "@mui/material";
 import {Rating} from "@mui/material";
@@ -11,55 +10,29 @@ import {FavDisable} from "../ui/favicons/FavDisable.tsx";
 import {Button} from "../ui/Button/Button.tsx";
 
 
-const charactiristicksTitle:{
-    name: string,
-    prop: string;
-}[] = [
-    {
-        name: "Производитель",
-        prop: "Канада",
-    },
-    {
-        name: "Количество мест, шт: ",
-        prop: "3",
-    },
-    {
-        name: "Мощность, л.с.",
-        prop: "155",
-    },
-    {
-        name: "Тип двигателя",
-        prop: "Бензиновый",
-    },
-    {
-        name: "Производитель",
-        prop: "Канада",
-    },
-    {
-        name: "Год выпуска",
-        prop: "2018",
-    },
-]
 
 
-export const CardPreview: FC<CardPreviewProps> = ({children, image, oldPrice, newPrice, rating}: CardPreviewProps):JSX.Element => {
+
+export const CardPreview: FC<CardPreviewProps> = ({itemId, sale, title, image, price, manufacturer, placeQuantity, powerEngine, engineType,releaseYear, rating, oldPrice}: CardPreviewProps):JSX.Element => {
     const [star, setStar] = useState<number>(rating);
     const [active, setActive] = useState<boolean>(false)
+
+
 
     return <div className={styles.card}>
         <div className="container">
             <div className={styles.card__inner}>
                 <div className={styles.card__left}>
-                    <span className={styles.card__left_spn}>SALE</span>
-                    <img src={card} alt="card" className={styles.card__left_img}/>
+                    {sale ? <span className={styles.card__left_spn}>SALE</span> : null}
+                    <img src={image} alt="card" className={styles.card__left_img}/>
                     <div className={styles.card__left_inner}>
-                        <p className={styles.card__left_inner_old}>{oldPrice}</p>
-                        <p className={styles.card__left_inner_new}>{newPrice}</p>
+                        {oldPrice ? <p className={styles.card__left_inner_old}>{price}₽</p> : null}
+                        <p className={styles.card__left_inner_new}>Цена: {String(price)}₽</p>
                         <Link to="/" className={styles.card__left_inner_link}>Нашли дешевле? Снизим цену!</Link>
                     </div>
                 </div>
                 <div className={styles.card__right}>
-                    <h1 className={styles.card__right_title}>{children}</h1>
+                    <h1 className={styles.card__right_title}>{title}</h1>
 
                     <span className={styles.card__right_spn}>Код товара: 	366666-2 </span>
 
@@ -88,7 +61,6 @@ export const CardPreview: FC<CardPreviewProps> = ({children, image, oldPrice, ne
                                 }}
                                 name="simple-controlled"
                                 value={star}
-                                onChange={ (e,number) => setStar(() => number)}
                                 />
                         </Box>
                     </div>
@@ -101,11 +73,27 @@ export const CardPreview: FC<CardPreviewProps> = ({children, image, oldPrice, ne
 
 
                         <ul className={styles.characteristics__list}>
-                            {charactiristicksTitle.map((item,index) => <li
-                              key={index}  className={styles.characteristics__list_item}>
-                                <p className={styles.characteristics__list_item_text}>{item.name}</p>
-                                <p className={styles.characteristics__list_item_text}>{item.prop}</p>
-                            </li>)}
+                            <li
+                              key={itemId}  className={styles.characteristics__list_item}>
+                                <p className={styles.characteristics__list_item_text}>Производитель</p>
+                                <p className={styles.characteristics__list_item_text}>{manufacturer}</p>
+                            </li>
+                            <li  className={styles.characteristics__list_item}>
+                                <p className={styles.characteristics__list_item_text}>Колл-во мест</p>
+                                <p className={styles.characteristics__list_item_text}>{placeQuantity}</p>
+                            </li>
+                            <li className={styles.characteristics__list_item}>
+                                <p className={styles.characteristics__list_item_text}>Мощность двигателя л\с</p>
+                                <p className={styles.characteristics__list_item_text}>{powerEngine}</p>
+                            </li>
+                            <li className={styles.characteristics__list_item}>
+                                <p className={styles.characteristics__list_item_text}>Тип двигателя</p>
+                                <p className={styles.characteristics__list_item_text}>{engineType}</p>
+                            </li>
+                            <li className={styles.characteristics__list_item}>
+                                <p className={styles.characteristics__list_item_text}>Дата выпуска</p>
+                                <p className={styles.characteristics__list_item_text}>{releaseYear}</p>
+                            </li>
                         </ul>
                         <Link to="/" className={styles.characteristics__link}>Показать еще</Link>
                         <Link to="/">

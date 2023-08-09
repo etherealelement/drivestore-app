@@ -16,14 +16,19 @@ export const ProductContent: FC<ProductContentProps> = ({ProductData}:ProductCon
                 </aside>
                 <ul className={styles.productContent__list}>
                     {ProductData.map(item => <PopularProductCard
-                        category={item.category}
-                        message={item.message}
-                        title={item.title}
                         itemId={item.id}
-                        price={item.price}
-                        image={item.image}
-                        sale={item.sale}
-                        key={item.id}
+                        category={item.category}
+                        image = {item.image}
+                        title = {item.title}
+                        price = {item.price}
+                        message={item.message}
+                        sale = {item.sale}
+                        manufacturer={item.manufacturer}
+                        placeQuantity={item.placeQuantity}
+                        powerEngine={item.powerEngine}
+                        engineType={item.engineType}
+                        releaseYear={item.releaseYear}
+                        rating={item.rating}
                     >{item.title}</PopularProductCard>)}
                 </ul>
             </div>

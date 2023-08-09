@@ -10,7 +10,6 @@ export const Cart: FC = () => {
     const cart = useSelector(state => state.cart.cart);
     const favorites = useSelector(state => state.favorites.favorites)
 
-
     return <div>
         <CountContext.Provider value={cart}>
                     <FavoritesContext.Provider value={favorites}>

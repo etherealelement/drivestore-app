@@ -1,9 +1,18 @@
-import {DetailedHTMLProps, HTMLAttributes, ReactNode} from "react";
+import {DetailedHTMLProps, HTMLAttributes} from "react";
 
 export interface CardPreviewProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    image?: string;
-    oldPrice: string;
-    newPrice: string;
-    children: ReactNode;
-    rating: number;
+    itemId: number,
+    message?: string,
+    sale: string,
+    title: string,
+    image: string,
+    category?:string,
+    price: string,
+    oldPrice?: number | string;
+    manufacturer: string,
+    placeQuantity: number,
+    powerEngine: number,
+    engineType: string,
+    releaseYear: number,
+    rating: number,
 }

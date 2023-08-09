@@ -13,6 +13,12 @@ export type ProductData = [
         price: number | string,
         message?: string,
         sale: boolean,
+        manufacturer: string,
+        placeQuantity: number,
+        powerEngine: number,
+        engineType: string,
+        releaseYear: number;
+        rating: number,
     }
 ]
 
