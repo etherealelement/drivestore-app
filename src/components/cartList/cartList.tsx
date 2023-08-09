@@ -22,6 +22,6 @@ export const CartList: FC = () => {
                 ></CartItems>)}
             </div>
         </div>
-        <EmtyCart>Ваша корзина пуста</EmtyCart>
+        {cart.length <= 0 ? <EmtyCart>Ваша корзина пуста</EmtyCart>: null}
     </section>
 };

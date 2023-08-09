@@ -13,8 +13,7 @@ export const ProductFavorites: FC = () => {
             <ul className={styles.productFav__list}>
                 {favorites.map((item:any) => <ProductFavoritesItem message={item.message} sale={item.sale} itemId={item.id} image={item.image} category={item.category} price={item.price} title={item.title} key={item.id}></ProductFavoritesItem>)}
             </ul>
-
-            {favorites.length === 0 && <EmtyCart>Избранных товаров пока нет</EmtyCart>}
+            {favorites.length <= 0 && <EmtyCart>Избранных товаров пока нет</EmtyCart>}
         </div>
     </div>;
 };

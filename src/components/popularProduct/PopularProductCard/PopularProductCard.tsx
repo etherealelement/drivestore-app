@@ -70,7 +70,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({ itemId,
 
         {sale ? <span className={styles.cardItem__sale}>SALE</span> : null}
 
-        <button className={styles.cardItem__fav} onClick={addToFav}>
+        <button className={styles.cardItem__fav} onClick={!activeFav ? addToFav : () => setActiveFav(!activeFav)}>
             {activeFav ? <FavActive/> : <FavDisable/>}
         </button>
 
