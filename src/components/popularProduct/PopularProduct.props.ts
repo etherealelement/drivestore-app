@@ -4,7 +4,7 @@ export interface PopularProductProps {
     navData: string[];
 }
 
-export type ProductData = [
+export interface ProductData
     {
         id: number,
         category: string;
@@ -20,6 +20,6 @@ export type ProductData = [
         releaseYear: number;
         rating: number,
     }
-]
+
 
 

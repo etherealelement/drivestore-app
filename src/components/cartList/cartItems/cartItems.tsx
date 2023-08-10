@@ -26,7 +26,7 @@ export const CartItems: FC<CartItemsProps> = ({
 	};
 
 	const handleDecrement = () => {
-		setTotalCount(e => e === 0 ? e: e - 1)
+		setTotalCount(e => count === 1 ? price : e - price)
 		setCount(e =>  e === 1 ? 1 : e - 1)
 	};
 
