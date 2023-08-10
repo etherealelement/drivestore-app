@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import styles from "./Range.module.scss";
 import { ArrowUp } from "../../ui/arrows/ArrowUp";
 import { ArrowDown } from "../../ui/arrows/ArrowDown";
-import { Typography } from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import Slider from "@mui/material/Slider/Slider";
 
 export const Range: FC = (): JSX.Element => {
@@ -32,24 +32,32 @@ export const Range: FC = (): JSX.Element => {
 			</div>
 
 			{arrow ? (
-				<div
+				<Box
 					style={{
-						margin: "auto",
+						marginLeft: "10px",
 						display: "block",
-						width: "fit-content",
+						width: "230px",
 					}}
 				>
-					<Typography id="range-slider" gutterBottom>
-						Select Price Range:
-					</Typography>
 					<Slider
 						getAriaLabel={() => 'Temperature range'}
 						value={value}
 						onChange={handleChange}
 						valueLabelDisplay="auto"
 					/>
-				</div>
+				</Box>
 			) : null}
+
+			{arrow ? <div className={styles.price__drop_box}>
+				<div className={styles.price__drop_box_from}>
+					<span className={styles.price__drop_box_from_text}>от</span>
+					<span className={styles.price__drop_box_from_counter}>{value[0]}</span>
+				</div>
+				<div className={styles.price__drop_box_to}>
+					<span className={styles.price__drop_box_to_text}>до</span>
+					<span className={styles.price__drop_box_to_counter}>{value[1]}</span>
+				</div>
+			</div> : null}
 		</>
 	);
 };

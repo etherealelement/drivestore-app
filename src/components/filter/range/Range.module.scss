@@ -7,6 +7,55 @@
     margin-bottom: 23px;
     &__drop {
 
+        &_box {
+            margin-top: 20px;
+            width: 240px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            &_from {
+                width: 50px;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+
+                &_text {
+                    font-size: 14px;
+                    font-style: normal;
+                    color: var(--unnamed, #C4C4C4);
+                }
+
+                &_counter {
+                    color: var(--unnamed, #2F3035);
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-decoration-line: underline;
+                }
+            }
+
+            &_to {
+                width: 50px;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+
+                &_text {
+                    font-size: 14px;
+                    font-style: normal;
+                    color: var(--unnamed, #C4C4C4);
+                }
+
+                &_counter {
+                    color: var(--unnamed, #2F3035);
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+
 
         &_spn {
             font-weight: 600;
