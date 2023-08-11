@@ -2,7 +2,6 @@ import {createSlice} from "@reduxjs/toolkit";
 import {initialState} from "../types/cartType.ts";
 
 
-console.log(initialState)
 const cartSlice = createSlice({
     name: "cart",
     initialState,

@@ -16,7 +16,7 @@ import {useAppSelector} from "../store/hooks/hooks.ts";
 function Home() {
 
     const cart = useAppSelector(item => item.cart.cartList)
-    const favorites = useAppSelector(item => item.favorites.favorites)
+    const favorites = useAppSelector(item => item.favorites.favList)
     return (
         <>
             <CountContext.Provider value={cart}>

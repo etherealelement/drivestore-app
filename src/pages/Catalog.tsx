@@ -11,7 +11,7 @@ import {useAppSelector} from "../store/hooks/hooks.ts";
 
 export const Catalog: FC = () => {
     const cart = useAppSelector(state => state.cart.cartList);
-    const favorites = useAppSelector(state => state.favorites.favorites)
+    const favorites = useAppSelector(state => state.favorites.favList)
 
     return <>
             <CountContext.Provider value={cart}>

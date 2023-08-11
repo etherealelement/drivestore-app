@@ -1,19 +1,13 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {CartActionInterface, CartStateInterface} from "../interfaces/cartSliceInterface.ts";
-
-
-
-const favStorage:CartStateInterface[] = [];
+import {initialState} from "../types/favType.ts";
 
 
 const favoritesSlice = createSlice({
     name: "favorites",
-    initialState: {
-        favorites: [],
-    },
+    initialState,
     reducers: {
-        addFavorites(state:CartStateInterface,action:CartActionInterface ){
-            state.favorites.push({
+        addFavorites(state,action ){
+            state.favList.push({
                 id: action.payload.id,
                 message: action.payload.message,
                 sale: action.payload.sale,
@@ -24,11 +18,8 @@ const favoritesSlice = createSlice({
             })
         },
         deleteFavorites(state, action) {
-          state.favorites = state.favorites.filter(item => item.id !== action.payload.id);
+          state.favList = state.favList.filter(item => item.id !== action.payload.id);
 
-
-            const favStorageFilter:CartStateInterface[] = favStorage.filter(item => item.id !== action.payload.id)
-            localStorage.setItem("favorites", JSON.stringify(favStorageFilter))
         },
     },
 })

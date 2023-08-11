@@ -1,4 +1,4 @@
-import {FC, useContext} from 'react';
+import {FC, memo, useContext} from 'react';
 import styles from "./Header.module.scss"
 import "../../utils/helpers/styles/normalize.scss"
 import "../../utils/helpers/styles/style.scss";
@@ -12,7 +12,7 @@ import {CountContext, FavoritesContext} from "../../context/homeContext.ts";
 
 const navigationArr:string[] = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
 
-export const Header: FC = () => {
+export const Header: FC = memo( () => {
 
     const cart = useContext(CountContext)
     const favorites = useContext(FavoritesContext)
@@ -68,12 +68,12 @@ export const Header: FC = () => {
             <div className={styles.header__bottom}>
                 <ul className={styles.header__bottom_list}>
                     {navigationArr.map((item, index) => {
-                       return <li className={styles.header__bottom_list_item} key={index}>
-                              <Link to={"#"} className={styles.header__bottom_list_item_link}>{item}</Link>
-                       </li>
+                        return <li className={styles.header__bottom_list_item} key={index}>
+                            <Link to={"#"} className={styles.header__bottom_list_item_link}>{item}</Link>
+                        </li>
                     }) }
                 </ul>
             </div>
         </div>
     </header>;
-};
+})

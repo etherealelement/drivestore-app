@@ -9,7 +9,7 @@ import {CartTypeTypes} from "../store/types/cartType.ts";
 
 export const Cart: FC = () => {
     const cart:CartTypeTypes[] = useAppSelector(state => state.cart.cartList);
-    const favorites = useAppSelector(state => state.favorites.favorites)
+    const favorites = useAppSelector(state => state.favorites.favList)
 
     return <div>
         <CountContext.Provider value={cart}>
