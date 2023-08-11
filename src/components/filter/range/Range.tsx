@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import styles from "./Range.module.scss";
 import { ArrowUp } from "../../ui/arrows/ArrowUp";
 import { ArrowDown } from "../../ui/arrows/ArrowDown";
-import {Box, Typography} from "@mui/material";
+import {Box} from "@mui/material";
 import Slider from "@mui/material/Slider/Slider";
 
 export const Range: FC = (): JSX.Element => {

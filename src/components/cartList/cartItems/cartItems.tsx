@@ -1,4 +1,4 @@
- import { FC, useState } from "react";
+ import {FC, memo, useCallback, useState} from "react";
 import { CartItemsProps } from "./cartItems.props.ts";
 import styles from "./cartItems.module.scss";
 import { Button } from "../../ui/Button/Button.tsx";
@@ -8,27 +8,21 @@ import {useDispatch} from "react-redux";
 import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
 
 
-export const CartItems: FC<CartItemsProps> = ({
-	itemId,
-	category,
-	image,
-	title,
-	price,
-}: CartItemsProps): JSX.Element => {
+export const CartItems: FC<CartItemsProps> = memo(({itemId,category,image,title,price,}): JSX.Element => {
 	const [count, setCount] = useState<number>(1);
 	const [totalCount, setTotalCount] = useState<number | string>(price);
 
+	console.log("[eq")
 
-
-	const handleIncrement = () => {
+	const handleIncrement = useCallback(() => {
 		setTotalCount(e => e + price)
 		setCount((e) => e + 1);
-	};
+	}, [price])
 
-	const handleDecrement = () => {
+	const handleDecrement = useCallback( () => {
 		setTotalCount(e => count === 1 ? price : e - price)
 		setCount(e =>  e === 1 ? 1 : e - 1)
-	};
+	}, [price]);
 
 
 	// Удаление карточки товара
@@ -57,17 +51,17 @@ export const CartItems: FC<CartItemsProps> = ({
 					</div>
 				</div>
 				<div className={styles.item__count}>
-					<button 
-					className={styles.item__count_svg}
-					onClick={handleDecrement}>
-                        <img src={MinysIcon} alt="minus" />
-                    </button>
+					<button
+						className={styles.item__count_svg}
+						onClick={handleDecrement}>
+						<img src={MinysIcon} alt="minus" />
+					</button>
 					<span className={styles.item__count_span}>{count}</span>
-					<button 
-					className={styles.item__count_svg}
-					onClick={handleIncrement}>
-                    <img src={PlusIcon} alt="plus" />
-                    </button>
+					<button
+						className={styles.item__count_svg}
+						onClick={handleIncrement}>
+						<img src={PlusIcon} alt="plus" />
+					</button>
 				</div>
 
 				<div className={styles.item__total}>
@@ -95,4 +89,4 @@ export const CartItems: FC<CartItemsProps> = ({
 			</div>
 		</li>
 	);
-};
+})
