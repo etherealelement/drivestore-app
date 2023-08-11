@@ -16,7 +16,7 @@ const itemArr:string[] = ["О товаре", "Характеристики", "О
 
 export const ProductCard: FC = () => {
 
-    const product = useAppSelector(state => state.productCard.productCard)
+    const product = useAppSelector(state => state.productCard.productListItem)
 
 
     return <div>

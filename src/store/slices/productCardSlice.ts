@@ -1,15 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {CartActionInterface, CartStateInterface} from "../interfaces/cartSliceInterface.ts";
-
+import {initialState} from "../types/productType.ts";
 
 const productCardSlice = createSlice({
     name: "productCard",
-    initialState: {
-        productCard: []
-    },
+    initialState,
     reducers: {
-        addProductCard(state:CartStateInterface, action:CartActionInterface) {
-            state.productCard.push({
+        addProductCard(state, action) {
+            state.productListItem.push({
                 id: action.payload.id,
                 message: action.payload.message,
                 sale: action.payload.sale,
@@ -26,11 +23,11 @@ const productCardSlice = createSlice({
             })
 
         },
-        deleteProductCard(state, action){
-            if (state.productCard.length === 1) {
-                 state.productCard
+        deleteProductCard(state){
+            if (state.productListItem.length === 1) {
+                 state.productListItem
             } else {
-                state.productCard = state.productCard.slice(1,2);
+                state.productListItem = state.productListItem.slice(1,2);
             }
 
         }
