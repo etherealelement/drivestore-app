@@ -1,5 +1,5 @@
 export interface PopularProductProps {
-    ProductData: ProductData;
+    ProductData: ProductData[];
     title: string;
     navData: string[];
 }

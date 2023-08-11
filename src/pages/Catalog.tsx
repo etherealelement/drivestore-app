@@ -6,12 +6,12 @@ import {Pagination} from "../components/pagination/Pagination.tsx";
 import {ProductContent} from "../components/productContent/productContent.tsx";
 import {catalogData} from "../utils/data/productArray.ts";
 import {CountContext, FavoritesContext} from "../context/homeContext.ts";
-import {useSelector} from "react-redux";
+import {useAppSelector} from "../store/hooks/hooks.ts";
 
 
 export const Catalog: FC = () => {
-    const cart = useSelector(state => state.cart.cart);
-    const favorites = useSelector(state => state.favorites.favorites)
+    const cart = useAppSelector(state => state.cart.cartList);
+    const favorites = useAppSelector(state => state.favorites.favorites)
 
     return <>
             <CountContext.Provider value={cart}>

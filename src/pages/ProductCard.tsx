@@ -9,14 +9,14 @@ import {CardTable} from "../components/cardTable/CardTable.tsx";
 import {PopularProduct} from "../components/popularProduct/PopularProduct.tsx";
 import {navArr, popularProduct2} from "../utils/data/productArray.ts";
 import {ProductPageContext} from "../context/productPageContext.ts";
-import {useSelector} from "react-redux";
+import {useAppSelector} from "../store/hooks/hooks.ts";
 
 
 const itemArr:string[] = ["О товаре", "Характеристики", "Отзывы", "Самовывоз", "Доставка", "Cервис", "Гарантия"];
 
 export const ProductCard: FC = () => {
 
-    const product = useSelector(state => state.productCard.productCard)
+    const product = useAppSelector(state => state.productCard.productCard)
 
 
     return <div>

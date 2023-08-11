@@ -6,6 +6,7 @@ import PlusIcon from "../../../assets/svgicons/plus.svg";
 import MinysIcon from "../../../assets/svgicons/minus.svg"
 import {useDispatch} from "react-redux";
 import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
+ import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 
 
 export const CartItems: FC<CartItemsProps> = memo(({itemId,category,image,title,price,}): JSX.Element => {
@@ -26,13 +27,13 @@ export const CartItems: FC<CartItemsProps> = memo(({itemId,category,image,title,
 
 
 	// Удаление карточки товара
-	const dispath = useDispatch()
+	const dispath = useAppDispatch()
 
 
 	const deleteCartItems = () => {
-		dispath(deleteCartItem({
-			id: itemId,
-		}))
+		dispath(deleteCartItem(
+			itemId
+		))
 	}
 
 

@@ -3,12 +3,13 @@ import {Header} from "../components/header/Header.tsx";
 import {Footer} from "../components/footer/Footer.tsx";
 import {CountContext, FavoritesContext} from "../context/homeContext.ts";
 import {CartList} from "../components/cartList/cartList.tsx";
-import {useSelector} from "react-redux";
+import {useAppSelector} from "../store/hooks/hooks.ts";
+import {CartTypeTypes} from "../store/types/cartType.ts";
 
 
 export const Cart: FC = () => {
-    const cart = useSelector(state => state.cart.cart);
-    const favorites = useSelector(state => state.favorites.favorites)
+    const cart:CartTypeTypes[] = useAppSelector(state => state.cart.cartList);
+    const favorites = useAppSelector(state => state.favorites.favorites)
 
     return <div>
         <CountContext.Provider value={cart}>

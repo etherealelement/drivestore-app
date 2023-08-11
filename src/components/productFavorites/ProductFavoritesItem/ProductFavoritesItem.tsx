@@ -5,17 +5,17 @@ import styles from "./ProductFavoritesItem.module.scss";
 import {FavActive} from "../../ui/favicons/FavActive.tsx";
 import {Button} from "../../ui/Button/Button.tsx";
 import {FavDisable} from "../../ui/favicons/FavDisable.tsx";
-import {useDispatch} from "react-redux";
 import {addCartItem} from "../../../store/slices/cartSlice.ts";
 import {Action, Dispatch} from "@reduxjs/toolkit";
 import {deleteFavorites} from "../../../store/slices/favoritesSlice.ts";
+import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 
 
 export const ProductFavoritesItem: FC<ProductFavoritesItemProps> = ({ title, itemId, image, category, price, message, sale, }:ProductFavoritesItemProps): JSX.Element => {
     const [active, setActive] = useState<boolean>(true)
 
-    const dispatchToCart:Dispatch<Action> = useDispatch()
-    const removeToFavDispatch:Dispatch<Action> = useDispatch()
+    const dispatchToCart:Dispatch<Action> = useAppDispatch()
+    const removeToFavDispatch:Dispatch<Action> = useAppDispatch()
     // Добавление фаворита в корзину
     const addToCart = () => {
         dispatchToCart(addCartItem({

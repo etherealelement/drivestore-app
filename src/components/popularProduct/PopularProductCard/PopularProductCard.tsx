@@ -6,11 +6,11 @@ import {FavDisable} from "../../ui/favicons/FavDisable.tsx";
 import {CardIconActive} from "../../ui/cardIcon/CardIconActive.tsx";
 import {CardIconDisable} from "../../ui/cardIcon/CardIconDisable.tsx";
 import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
 import {addCartItem} from "../../../store/slices/cartSlice.ts";
 import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
 import {addFavorites} from "../../../store/slices/favoritesSlice.ts";
 import {addProductCard, deleteProductCard} from "../../../store/slices/productCardSlice.ts";
+import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 
 
 export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, category, image, title, price, message, sale, manufacturer, placeQuantity, powerEngine, engineType, releaseYear, rating}: PopularProductCardProps): JSX.Element => {
@@ -18,11 +18,11 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
 
-    const dispatch = useDispatch()
-    const deleteDispath = useDispatch()
-    const favDispath = useDispatch()
-    const productPispatch = useDispatch()
-    const deleteCard = useDispatch()
+    const dispatch = useAppDispatch()
+    const deleteDispatch = useAppDispatch()
+    const favDispath = useAppDispatch()
+    const productPispatch = useAppDispatch()
+    const deleteCard = useAppDispatch()
 
     // Добавление элемента в стор
     const addCart = () => {
@@ -42,9 +42,9 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
 
     // Удаление элемента из стора
     const deleteCart = () => {
-        deleteDispath(deleteCartItem({
-            id: itemId,
-        }))
+        deleteDispatch(deleteCartItem(
+           itemId
+        ))
         setActiveProduct(!activeProduct)
     }
 

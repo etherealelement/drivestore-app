@@ -11,12 +11,12 @@ import {navArr} from "../utils/data/productArray.ts";
 import {popularProduct2} from "../utils/data/productArray.ts";
 import {Footer} from "../components/footer/Footer.tsx";
 import {CountContext, FavoritesContext} from "../context/homeContext.ts";
-import {useSelector} from "react-redux";
+import {useAppSelector} from "../store/hooks/hooks.ts";
 
 function Home() {
 
-    const cart = useSelector(item => item.cart.cart)
-    const favorites = useSelector(item => item.favorites.favorites)
+    const cart = useAppSelector(item => item.cart.cartList)
+    const favorites = useAppSelector(item => item.favorites.favorites)
     return (
         <>
             <CountContext.Provider value={cart}>

@@ -17,6 +17,8 @@ export const Header: FC = () => {
     const cart = useContext(CountContext)
     const favorites = useContext(FavoritesContext)
 
+    console.log(cart)
+
     return <header className={styles.header}>
         <div className="container">
             <div className={styles.header__top}>
