@@ -14,10 +14,7 @@ import {Button} from "../ui/Button/Button.tsx";
 
 
 export const CardPreview: FC<CardPreviewProps> = ({itemId, sale, title, image, price, manufacturer, placeQuantity, powerEngine, engineType,releaseYear, rating, oldPrice}: CardPreviewProps):JSX.Element => {
-    const [star, setStar] = useState<number>(rating);
     const [active, setActive] = useState<boolean>(false)
-
-
 
     return <div className={styles.card}>
         <div className="container">
@@ -48,6 +45,7 @@ export const CardPreview: FC<CardPreviewProps> = ({itemId, sale, title, image, p
                         <Box>
                             <Typography component="legend"></Typography>
                             <Rating
+                                readOnly
                                 sx={{
                                     '& .MuiRating-iconFilled': {
                                         color: '#1C62CD',
@@ -60,7 +58,7 @@ export const CardPreview: FC<CardPreviewProps> = ({itemId, sale, title, image, p
                                     },
                                 }}
                                 name="simple-controlled"
-                                value={star}
+                                value={rating}
                                 />
                         </Box>
                     </div>
