@@ -19,6 +19,15 @@ export interface ProductData
         engineType: string,
         releaseYear: number;
         rating: number,
+        popular: number,
+        availability: boolean,
+        new: boolean,
+        stocks: boolean,
+        powerLs: number,
+        maksSpeed: number,
+        brand: string,
+        model: string,
+        country: string,
     }
 
 
