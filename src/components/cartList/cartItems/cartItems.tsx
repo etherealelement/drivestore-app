@@ -4,7 +4,6 @@ import styles from "./cartItems.module.scss";
 import { Button } from "../../ui/Button/Button.tsx";
 import PlusIcon from "../../../assets/svgicons/plus.svg";
 import MinysIcon from "../../../assets/svgicons/minus.svg"
-import {useDispatch} from "react-redux";
 import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
  import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 

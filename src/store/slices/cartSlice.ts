@@ -1,5 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {initialState} from "../types/cartType.ts";
+import {CartItemInterface} from "../interfaces/cartSliceInterface.ts";
+
+
+
 
 
 const cartSlice = createSlice({
@@ -7,7 +11,7 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addCartItem(state, action) {
-            state.cartList.push({
+            const cartItemData:CartItemInterface = {
                 id: action.payload.id,
                 message: action.payload.message,
                 sale: action.payload.sale,
@@ -15,7 +19,8 @@ const cartSlice = createSlice({
                 image: action.payload.image,
                 category: action.payload.category,
                 price: action.payload.price,
-            })
+            }
+            state.cartList.push(cartItemData)
         },
         deleteCartItem(state, action) {
             console.log(action.payload)
@@ -23,6 +28,8 @@ const cartSlice = createSlice({
         },
     }
 })
+
+
 
 
 export const { addCartItem, deleteCartItem } = cartSlice.actions;

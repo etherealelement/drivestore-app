@@ -80,9 +80,9 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
             releaseYear: releaseYear,
             rating: rating,
         }))
-        deleteCard(deleteProductCard({
-            id: itemId,
-        }))
+        deleteCard(deleteProductCard(
+            itemId,
+        ))
     }
 
 
