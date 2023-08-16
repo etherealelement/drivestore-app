@@ -42,8 +42,25 @@ const catalogCardSlice = createSlice({
               }
           }
         },
+
+        sortByOrdered(state,action) {
+          switch (action.payload) {
+              case "Под заказ" : {
+                  state.catalog = state.catalog.filter(item => item.availability === "Под заказ")
+                  break;
+              }
+              case "Все товары" : {
+                  state.catalog = state.catalog.filter(item => item)
+                  break;
+              }
+
+              default: {
+                  throw new Error()
+              }
+          }
+        },
     },
 })
 
-export const {sortByPopular, sortByAvailability} = catalogCardSlice.actions;
+export const {sortByPopular, sortByAvailability, sortByOrdered} = catalogCardSlice.actions;
 export default catalogCardSlice.reducer
