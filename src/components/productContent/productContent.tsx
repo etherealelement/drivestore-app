@@ -16,6 +16,7 @@ export const ProductContent: FC<ProductContentProps> = ({ProductData}:ProductCon
                 </aside>
                 <ul className={styles.productContent__list}>
                     {ProductData.map(item => <PopularProductCard
+                        availability =  {item.availability}
                         key={item.id}
                         itemId={item.id}
                         category={item.category}

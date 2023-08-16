@@ -59,7 +59,7 @@
     justify-content: space-between;
     flex-direction: column;
     min-height: 350px;
-
+    align-items: center;
     &_descr {
       padding-top: 14px;
       color:  #2F3035;
@@ -127,5 +127,16 @@
     letter-spacing: 0.84px;
     padding: 8px 15px;
     background:  #1C62CD;
+  }
+
+  &__have {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px ;
+
+    &_title {
+      font-weight: bold;
+    }
   }
 }

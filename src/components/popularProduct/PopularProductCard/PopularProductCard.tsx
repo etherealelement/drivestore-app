@@ -13,7 +13,7 @@ import {addProductCard, deleteProductCard} from "../../../store/slices/productCa
 import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 
 
-export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, category, image, title, price, message, sale, manufacturer, placeQuantity, powerEngine, engineType, releaseYear, rating}: PopularProductCardProps): JSX.Element => {
+export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, category, image, title, price, message, sale, manufacturer, placeQuantity, powerEngine, engineType, releaseYear, rating, availability}: PopularProductCardProps): JSX.Element => {
 
     const [activeFav, setActiveFav] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false)
@@ -105,6 +105,10 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
                 </p>
             </Link>
 
+            <div className={styles.cardItem__have}>
+                <p className={styles.cardItem__have_title}>Наличие:</p>
+                <p className={styles.cardItem__have_text}>{availability}</p>
+            </div>
 
             {price ? <p className={styles.cardItem__block_price}>{price} ₽</p> :
 

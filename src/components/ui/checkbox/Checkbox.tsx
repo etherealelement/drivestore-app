@@ -3,10 +3,10 @@ import styles from "./Checkbox.module.scss";
 import {CheckboxProps} from "./Checkbox.props.ts";
 import cn from "classnames";
 
-export const Checkbox: FC<CheckboxProps> = ({children, type, labelColor}: CheckboxProps): JSX.Element => {
+export const Checkbox: FC<CheckboxProps> = ({children, type, labelColor, ...props}: CheckboxProps): JSX.Element => {
 
     
-    return <div className={styles.checkbox}>
+    return <div className={styles.checkbox} {...props}>
         <label className={cn(styles.checkbox__label, {
             [styles.checkbox__label_ghost]: labelColor === "ghost",
         })}>

@@ -16,6 +16,7 @@ export interface ProductContentData {
     engineType: string,
     releaseYear: number;
     rating: number,
+    availability: string,
 }
 
 

@@ -14,4 +14,5 @@ export interface PopularProductCardProps extends DetailedHTMLProps<HTMLAttribute
     engineType: string,
     releaseYear: number;
     rating: number,
+    availability: string,
 }

@@ -15,7 +15,7 @@ export type CatalogCardType = {
     releaseYear: number;
     rating: number,
     popular: number,
-    availability: boolean,
+    availability: string,
     new: boolean,
     stocks: boolean,
     powerLs: number,
