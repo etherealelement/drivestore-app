@@ -1,4 +1,4 @@
-import {FC} from 'react';
+
 import {Header} from "../components/header/Header.tsx";
 import {Footer} from "../components/footer/Footer.tsx";
 import {Breadcrumbs} from "../components/breadcrumbs/Breadcrumbs.tsx";
@@ -8,7 +8,7 @@ import {CountContext, FavoritesContext} from "../context/homeContext.ts";
 import {useAppSelector} from "../store/hooks/hooks.ts";
 
 
-export const Catalog: FC = () => {
+function Catalog(): JSX.Element{
     const cart = useAppSelector(state => state.cart.cartList);
     const favorites = useAppSelector(state => state.favorites.favList)
     const catalog = useAppSelector(state => state.catalogCard.catalog);
@@ -27,3 +27,5 @@ export const Catalog: FC = () => {
             </CountContext.Provider>
     </>;
 };
+
+export default Catalog;

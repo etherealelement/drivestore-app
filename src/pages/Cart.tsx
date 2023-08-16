@@ -1,4 +1,4 @@
-import {FC} from 'react';
+
 import {Header} from "../components/header/Header.tsx";
 import {Footer} from "../components/footer/Footer.tsx";
 import {CountContext, FavoritesContext} from "../context/homeContext.ts";
@@ -7,7 +7,7 @@ import {useAppSelector} from "../store/hooks/hooks.ts";
 import {CartTypeTypes} from "../store/types/cartType.ts";
 
 
-export const Cart: FC = () => {
+function Cart():JSX.Element {
     const cart:CartTypeTypes[] = useAppSelector(state => state.cart.cartList);
     const favorites = useAppSelector(state => state.favorites.favList)
 
@@ -21,3 +21,5 @@ export const Cart: FC = () => {
         </CountContext.Provider>
     </div>;
 };
+
+export default Cart;

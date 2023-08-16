@@ -1,21 +1,37 @@
-import Home from "./pages/Home.tsx";
 import {Routes, Route} from "react-router-dom";
-import {Catalog} from "./pages/Catalog.tsx";
-import {ProductCard} from "./pages/ProductCard.tsx";
-import {Cart} from "./pages/Cart.tsx";
 import {Favorites} from "./pages/Favorites.tsx";
 import {Provider} from "react-redux";
 import store from "./store/store.ts";
+import {lazy, Suspense} from "react";
+import {Preloader} from "./components/ui/preloader/Preloader.tsx";
+
+const Home = lazy(() => import("./pages/Home.tsx"));
+const Catalog = lazy(() => import("./pages/Catalog.tsx"))
+const ProductCard = lazy(() => import("./pages/ProductCard.tsx"));
+const Cart = lazy(() => import("./pages/Cart.tsx"));
 
 function App() {
+
     return (
         <>
            <Provider store={store}>
                <Routes>
-                   <Route path={"/"} element={<Home/>}></Route>
-                   <Route path={"/catalog"} element={<Catalog/>}></Route>
-                   <Route path={"/card"} element={<ProductCard/>}></Route>
-                   <Route path={"/cart"} element={<Cart/>}></Route>
+                   <Route path={"/"} element={
+                       <Suspense fallback= {<Preloader></Preloader>}>
+                       <Home></Home>
+                   </Suspense>}>
+                       </Route>
+                   <Route path={"/catalog"} element={
+                       <Suspense fallback={<Preloader></Preloader>}>
+                           <Catalog/>
+                       </Suspense>
+                   }></Route>
+                   <Route path={"/card"} element={<Suspense fallback={<Preloader></Preloader>}>
+                       <ProductCard></ProductCard>
+                   </Suspense>}></Route>
+                   <Route path={"/cart"} element={<Suspense fallback={<Preloader></Preloader>}>
+                       <Cart></Cart>
+                   </Suspense>}></Route>
                    <Route path={"/favorites"} element={<Favorites/>}></Route>
                </Routes>
            </Provider>

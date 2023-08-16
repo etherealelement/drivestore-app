@@ -1,4 +1,4 @@
-import { FC } from 'react';
+
 import {Header} from "../components/header/Header.tsx";
 import {Footer} from "../components/footer/Footer.tsx";
 import {Breadcrumbs} from "../components/breadcrumbs/Breadcrumbs.tsx";
@@ -14,7 +14,7 @@ import {useAppSelector} from "../store/hooks/hooks.ts";
 
 const itemArr:string[] = ["О товаре", "Характеристики", "Отзывы", "Самовывоз", "Доставка", "Cервис", "Гарантия"];
 
-export const ProductCard: FC = () => {
+function ProductCard():JSX.Element {
 
     const product = useAppSelector(state => state.productCard.productListItem)
 
@@ -47,3 +47,5 @@ export const ProductCard: FC = () => {
         </ProductPageContext.Provider>
     </div>;
 };
+
+export default ProductCard;
