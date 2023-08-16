@@ -5,6 +5,7 @@ import {CountContext, FavoritesContext} from "../context/homeContext.ts";
 import {CartList} from "../components/cartList/cartList.tsx";
 import {useAppSelector} from "../store/hooks/hooks.ts";
 import {CartTypeTypes} from "../store/types/cartType.ts";
+import {StickyFooter} from "../components/stickyFooter/StickyFooter.tsx";
 
 
 function Cart():JSX.Element {
@@ -14,9 +15,11 @@ function Cart():JSX.Element {
     return <div>
         <CountContext.Provider value={cart}>
                     <FavoritesContext.Provider value={favorites}>
-                        <Header></Header>
-                        <CartList></CartList>
-                        <Footer></Footer>
+                        <StickyFooter>
+                            <Header></Header>
+                            <CartList></CartList>
+                            <Footer></Footer>
+                        </StickyFooter>
                     </FavoritesContext.Provider>
         </CountContext.Provider>
     </div>;
