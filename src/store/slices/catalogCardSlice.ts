@@ -1,10 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {initialState} from "../types/catalogCardType.ts";
 
+
 const catalogCardSlice = createSlice({
     name: "catalog",
     initialState,
     reducers: {
+        reset: () => initialState,
       sortByPopular(state,action):void {
             switch (action.payload) {
                 case "Популярности" : {
@@ -26,34 +28,14 @@ const catalogCardSlice = createSlice({
       },
         sortByAvailability(state,action): void {
           switch (action.payload) {
-
               case "В наличии": {
                   state.catalog = state.catalog.filter(item => item.availability === "В наличии")
                   break;
               }
-
-              case "Все товары" : {
-                  state.catalog = state.catalog.filter(item => item)
-                  break;
-              }
-
-              default: {
-                  throw new Error()
-              }
-          }
-        },
-
-        sortByOrdered(state,action) {
-          switch (action.payload) {
-              case "Под заказ" : {
+              case "Под заказ": {
                   state.catalog = state.catalog.filter(item => item.availability === "Под заказ")
                   break;
               }
-              case "Все товары" : {
-                  state.catalog = state.catalog.filter(item => item)
-                  break;
-              }
-
               default: {
                   throw new Error()
               }
@@ -62,5 +44,5 @@ const catalogCardSlice = createSlice({
     },
 })
 
-export const {sortByPopular, sortByAvailability, sortByOrdered} = catalogCardSlice.actions;
+export const {sortByPopular, sortByAvailability, reset} = catalogCardSlice.actions;
 export default catalogCardSlice.reducer

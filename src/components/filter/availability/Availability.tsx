@@ -4,25 +4,44 @@ import {ArrowUp} from "../../ui/arrows/ArrowUp.tsx";
 import {ArrowDown} from "../../ui/arrows/ArrowDown.tsx";
 import {Checkbox} from "../../ui/checkbox/Checkbox.tsx";
 import {useAppDispatch} from "../../../store/hooks/hooks.ts";
-import {sortByAvailability, sortByOrdered} from "../../../store/slices/catalogCardSlice.ts";
+import {reset, sortByAvailability} from "../../../store/slices/catalogCardSlice.ts";
 export const Availability: FC = () => {
     const [arrow, setArrow] = useState(true);
-    const [checked, setChecked] = useState<boolean>(false)
+    const [checkedHave, setCheckedHave] = useState<boolean>(true);
+    const [checkedOrder, setCheckedOrder] = useState<boolean>(true);
     const dispatch = useAppDispatch();
     // фильтрация по наличию товара
     const handleArrow = () => {
         setArrow(!arrow)
     }
 
-    const handleSort = () => {
-        setChecked(!checked)
-        if(checked) {
+    console.log(checkedHave);
+
+
+    // функция сортировки по наличию
+    const handleSortHave = () => {
+        setCheckedHave(!checkedHave);
+        if (checkedHave) {
             dispatch(sortByAvailability("В наличии"))
         } else {
-            dispatch(sortByAvailability("Все товары"))
+            dispatch(reset())
         }
 
     }
+
+    const handleSortOrdered = () => {
+        setCheckedOrder(!checkedOrder);
+        if (checkedOrder) {
+            dispatch(sortByAvailability("Под заказ"))
+        } else {
+            dispatch(reset())
+        }
+        if (!checkedHave && checkedOrder || checkedHave && !checkedOrder || !checkedOrder && !checkedHave) dispatch(reset())
+    }
+
+    // функция сортировки под заказ
+
+
 
     return <div className={styles.availability}>
         <div className={styles.availability__block} onClick={handleArrow}>
@@ -33,8 +52,8 @@ export const Availability: FC = () => {
         </div>
 
         <div className={`${arrow ? styles.availability__block_input : styles.hidden}`}>
-            <Checkbox type={"checkbox"} labelColor={"default"} onClick={handleSort}>В наличии</Checkbox>
-            <Checkbox type={"checkbox"} labelColor={"default"}  onClick={() => dispatch(sortByOrdered("Под заказ"))}>Под заказ</Checkbox>
+            <Checkbox type={"checkbox"} labelColor={"default"} onClick={handleSortHave}>В наличии</Checkbox>
+            <Checkbox type={"checkbox"} labelColor={"default"}  onClick={handleSortOrdered}>Под заказ</Checkbox>
         </div>
     </div>;
 };
