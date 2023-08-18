@@ -9,8 +9,9 @@
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 30px;
-    max-height: 420px;
+    min-height: 420px;
   }
 
 

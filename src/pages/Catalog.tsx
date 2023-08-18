@@ -6,6 +6,7 @@ import {Pagination} from "../components/pagination/Pagination.tsx";
 import {ProductContent} from "../components/productContent/productContent.tsx";
 import {CountContext, FavoritesContext} from "../context/homeContext.ts";
 import {useAppSelector} from "../store/hooks/hooks.ts";
+import {StickyFooter} from "../components/stickyFooter/StickyFooter.tsx";
 
 
 function Catalog(): JSX.Element{
@@ -16,13 +17,15 @@ function Catalog(): JSX.Element{
     return <>
             <CountContext.Provider value={cart}>
                 <FavoritesContext.Provider value={favorites}>
-                    <Header></Header>
-                    <main>
-                        <Breadcrumbs></Breadcrumbs>
-                        <Pagination>Гидроциклы</Pagination>
-                        <ProductContent ProductData={catalog}></ProductContent>
-                    </main>
-                    <Footer></Footer>
+                    <StickyFooter>
+                        <Header></Header>
+                        <main>
+                            <Breadcrumbs></Breadcrumbs>
+                            <Pagination>Гидроциклы</Pagination>
+                            <ProductContent ProductData={catalog}></ProductContent>
+                        </main>
+                        <Footer></Footer>
+                    </StickyFooter>
                 </FavoritesContext.Provider>
             </CountContext.Provider>
     </>;

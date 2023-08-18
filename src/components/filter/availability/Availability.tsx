@@ -52,6 +52,7 @@ export const Availability: FC = () => {
         </div>
 
         <div className={`${arrow ? styles.availability__block_input : styles.hidden}`}>
+            <Checkbox type={"checkbox"} labelColor={"default"} onClick={() => dispatch(reset())}>Все</Checkbox>
             <Checkbox type={"checkbox"} labelColor={"default"} onClick={handleSortHave}>В наличии</Checkbox>
             <Checkbox type={"checkbox"} labelColor={"default"}  onClick={handleSortOrdered}>Под заказ</Checkbox>
         </div>
