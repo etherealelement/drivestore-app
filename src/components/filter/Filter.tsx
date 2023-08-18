@@ -18,7 +18,7 @@ const countriesArr: string[] = ["Россия", "Китай", "Германия"
 
 
 export const Filter: FC = () => {
-    return <div>
+    return <div className={styles.filter}>
         <ul className={styles.filter__list}>
             {navArr.map((item,index) => <NavBar
                 onEvent={(e) => e.preventDefault()}

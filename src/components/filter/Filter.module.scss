@@ -1,6 +1,12 @@
+.filter {
+  min-height: 100vh;
+}
+
+
 .filter__list{
   display: flex;
   align-items: center;
   gap: 42px;
   margin-bottom: 41px;
 }
+
