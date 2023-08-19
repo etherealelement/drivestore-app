@@ -52,8 +52,12 @@ const catalogCardSlice = createSlice({
               }
           }
         },
+        sortByPrice(state, action ) {
+            console.log(action.payload[0])
+            state.catalog = state.catalog.filter(item => item.price)
+        },
     },
 })
 
-export const {sortByPopular, sortByAvailability, reset, sortByNew} = catalogCardSlice.actions;
+export const {sortByPopular, sortByAvailability, reset, sortByNew, sortByPrice} = catalogCardSlice.actions;
 export default catalogCardSlice.reducer

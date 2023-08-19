@@ -1,19 +1,29 @@
-import { FC, useState } from "react";
+import {FC, useCallback, useEffect, useState} from "react";
 import styles from "./Range.module.scss";
 import { ArrowUp } from "../../ui/arrows/ArrowUp";
 import { ArrowDown } from "../../ui/arrows/ArrowDown";
-import {Box} from "@mui/material";
-import Slider from "@mui/material/Slider/Slider";
+import {Slider} from "@mui/material";
+import {useAppDispatch} from "../../../store/hooks/hooks.ts";
+import {sortByPrice} from "../../../store/slices/catalogCardSlice.ts";
 
-export const Range: FC = (): JSX.Element => {
+
+export const RangeSlider: FC = (): JSX.Element => {
+	const [minValue, setMinValue] = useState<number>(1000)
+	const [maxValue, setMaxValue] = useState<number>(50000)
 	const [arrow, setArrow] = useState(true);
-	const [value, setValue] =  useState([0,10]);
-  
+	const [value, setValue] =  useState([minValue, maxValue]);
+
+	const dispatch = useAppDispatch()
+
 	// Changing State when volume increases/decreases
-	const handleChange = (e: Event, data: number[]): void => {
-		const newArr = data.map(item => item);
-		setValue(newArr)
-	}
+	const onPriceChange= useCallback((e: any, newValue: any) => {
+		console.log(newValue)
+		setValue(newValue)
+	}, [value])
+
+	useEffect(() => {
+		dispatch(sortByPrice(value))
+	}, [value])
 
 	const handleArrow = () => {
 		setArrow(!arrow);
@@ -32,30 +42,31 @@ export const Range: FC = (): JSX.Element => {
 			</div>
 
 			{arrow ? (
-				<Box
-					style={{
-						marginLeft: "10px",
-						display: "block",
-						width: "230px",
-					}}
-				>
+				<div className={styles.slider__box}>
 					<Slider
 						getAriaLabel={() => 'Temperature range'}
 						value={value}
-						onChange={handleChange}
-						valueLabelDisplay="auto"
+						onChange={onPriceChange}
+						aria-label="Temperature"
+						min={1000}
+						max={1500000}
+
 					/>
-				</Box>
+				</div>
 			) : null}
 
 			{arrow ? <div className={styles.price__drop_box}>
-				<div className={styles.price__drop_box_from}>
-					<span className={styles.price__drop_box_from_text}>от</span>
-					<span className={styles.price__drop_box_from_counter}>{value[0]}</span>
-				</div>
-				<div className={styles.price__drop_box_to}>
-					<span className={styles.price__drop_box_to_text}>до</span>
-					<span className={styles.price__drop_box_to_counter}>{value[1]}</span>
+				<div className={styles.price__drop_box_input}>
+					<label className={styles.price__drop_box_input_label}>
+						<span className={styles.price__drop_box_input_label_spnFrom}>от</span>
+						<input type="number"  placeholder={"10000"}  value={value[0]}  min={"10000"} max={"15000000"} className={styles.price__drop_box_input_label_from}/>
+						<span className={styles.price__drop_box_input_label_spnFrom}>₽</span>
+					</label>
+					<label className={styles.price__drop_box_input_label}>
+						<span className={styles.price__drop_box_input_label_spnFrom}>до</span>
+						<input type="number" placeholder={"15000000"} value={value[1]} min={"10000"} max={"15000000"}  className={styles.price__drop_box_input_label_to}  />
+						<span className={styles.price__drop_box_input_label_spnFrom}>₽</span>
+					</label>
 				</div>
 			</div> : null}
 		</>

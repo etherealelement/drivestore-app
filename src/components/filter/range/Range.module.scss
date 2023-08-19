@@ -8,50 +8,40 @@
     &__drop {
 
         &_box {
-            margin-top: 20px;
-            width: 240px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
 
-
-            &_from {
-                width: 50px;
-                justify-content: space-between;
+            &_input {
                 display: flex;
                 align-items: center;
+                gap: 20px;
 
-                &_text {
+                &_label {
+                    border: 1px solid #8d8d8d;
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    max-width: 130px;
+                    height: 40px;
                     font-size: 14px;
-                    font-style: normal;
-                    color: var(--unnamed, #C4C4C4);
-                }
 
-                &_counter {
-                    color: var(--unnamed, #2F3035);
-                    font-size: 14px;
-                    font-weight: 400;
-                    text-decoration-line: underline;
-                }
-            }
+                    &_spnFrom {
+                        opacity: .6;
+                    }
 
-            &_to {
-                width: 50px;
-                justify-content: space-between;
-                display: flex;
-                align-items: center;
+                    &_from {
+                        color: #2F3035;
+                        border: none;
+                        outline: none;
+                        max-width: 70px;
+                    }
 
-                &_text {
-                    font-size: 14px;
-                    font-style: normal;
-                    color: var(--unnamed, #C4C4C4);
-                }
+                    &_to {
+                        color: #2F3035;
+                        border: none;
+                        outline: none;
+                        max-width: 70px;
+                    }
 
-                &_counter {
-                    color: var(--unnamed, #2F3035);
-                    font-size: 14px;
-                    font-weight: 400;
-                    text-decoration-line: underline;
                 }
             }
         }
@@ -90,10 +80,30 @@
 
 .range {
     margin-top: 39px;
+
+
+    &__slider {
+        max-width: 150px;
+        position: relative;
+        margin: 15px 0 30px 0;
+
+    }
 }
 
 
 .slider {
     margin-top: 20px;
+
+    &__box {
+        max-width: 245px;
+        margin-bottom: 20px;
+    }
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

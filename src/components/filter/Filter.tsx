@@ -3,7 +3,7 @@ import {Availability} from "./availability/Availability.tsx";
 import styles from "./Filter.module.scss"
 import {NavBar} from "../ui/navbar/NavBar.tsx";
 import { New } from './new/New.tsx';
-import { Range } from './range/Range.tsx';
+import {RangeSlider} from './range/Range.tsx';
 import {Selection} from "./selection/Selection.tsx";
 import {Brand} from "./brand/Brand.tsx";
 import {Model} from "./model/Model.tsx";
@@ -27,7 +27,7 @@ export const Filter: FC = () => {
         </ul>
         <Availability></Availability>
         <New></New>
-        <Range></Range>
+        <RangeSlider></RangeSlider>
         <Selection options={optionsArr} children={optionsTitle}></Selection>
         <Brand></Brand>
         <Model></Model>
