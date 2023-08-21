@@ -53,8 +53,7 @@ const catalogCardSlice = createSlice({
           }
         },
         sortByPrice(state, action ) {
-            console.log(action.payload[0])
-            state.catalog = state.catalog.filter(item => item.price)
+           state.catalog = state.catalog.filter(item =>  item.price <= action.payload[1] && item.price >= action.payload[0])
         },
     },
 })
