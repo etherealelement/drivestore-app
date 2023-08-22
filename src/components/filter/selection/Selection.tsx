@@ -25,10 +25,14 @@ export const Selection: FC<SelectionProps> = ({children}:SelectionProps):JSX.Ele
 
     const handleChangeEngine = (event:ChangeEvent<HTMLInputElement>):void => {
         setTextValueEngine(event.target.value);
+        dispatch(reset())
+        dispatch(sortByPower({type: "POWER_ENGINE", powerEngine: +event.target.value}))
     }
 
     const handleChangeSpeed = (event:ChangeEvent<HTMLInputElement>):void => {
         setTextValueSpeed(event.target.value);
+        dispatch(reset())
+        dispatch(sortByPower({type: "MAX_SPEED", maxSpeed: +event.target.value}))
     }
 
     return <div className={styles.selection}>

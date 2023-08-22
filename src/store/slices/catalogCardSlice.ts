@@ -66,6 +66,13 @@ const catalogCardSlice = createSlice({
                     state.catalog = state.catalog.filter(item => item.powerEngine === action.payload.powerEngine)
                     break;
                 }
+                case "MAX_SPEED": {
+                    state.catalog = state.catalog.filter(item => item.maksSpeed === action.payload.maxSpeed)
+                    break;
+                }
+                default: {
+                    throw new Error()
+                }
             }
         },
     },
