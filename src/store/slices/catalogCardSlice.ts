@@ -55,8 +55,21 @@ const catalogCardSlice = createSlice({
         sortByPrice(state, action ) {
            state.catalog = state.catalog.filter(item =>  item.price <= action.payload[1] && item.price >= action.payload[0])
         },
+        sortByPower(state, action) {
+            console.log(action.payload)
+            switch(action.payload.type) {
+                case "POWER_LS": {
+                    state.catalog = state.catalog.filter(item => item.powerLs === action.payload.powerLs)
+                    break;
+                }
+                case "POWER_ENGINE": {
+                    state.catalog = state.catalog.filter(item => item.powerEngine === action.payload.powerEngine)
+                    break;
+                }
+            }
+        },
     },
 })
 
-export const {sortByPopular, sortByAvailability, reset, sortByNew, sortByPrice} = catalogCardSlice.actions;
+export const {sortByPopular, sortByAvailability, reset, sortByNew, sortByPrice, sortByPower} = catalogCardSlice.actions;
 export default catalogCardSlice.reducer

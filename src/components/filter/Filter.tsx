@@ -12,7 +12,6 @@ import {Countries} from "./countries/Countries.tsx";
 import {Choose} from "./choose/Choose.tsx";
 
 const navArr: string[] = ["ПАРАМЕТРЫ","ПО МАРКЕ"];
-const optionsArr: string[] = ["90", "130", "154", "230","300"];
 const optionsTitle: string[] = ["Мощность, л.с.", "Мощность двигателя, л.с.", "Макс. скорость"];
 const countriesArr: string[] = ["Россия", "Китай", "Германия", "CША"]
 
@@ -28,7 +27,7 @@ export const Filter: FC = () => {
         <Availability></Availability>
         <New></New>
         <RangeSlider></RangeSlider>
-        <Selection options={optionsArr} children={optionsTitle}></Selection>
+        <Selection children={optionsTitle}></Selection>
         <Brand></Brand>
         <Model></Model>
         <Stocks></Stocks>

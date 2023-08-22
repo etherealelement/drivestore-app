@@ -29,6 +29,6 @@ function Catalog(): JSX.Element{
                 </FavoritesContext.Provider>
             </CountContext.Provider>
     </>;
-};
+}
 
 export default Catalog;

@@ -2,14 +2,25 @@ import {ChangeEvent, FC, useState} from 'react';
 import styles from "./Selection.module.scss";
 import {SelectionProps} from "./Selection.props.ts";
 import {Box, TextField, MenuItem} from "@mui/material";
+import { useAppDispatch } from '../../../store/hooks/hooks.ts';
+import { reset, sortByPower } from '../../../store/slices/catalogCardSlice.ts';
 
-export const Selection: FC<SelectionProps> = ({children, options}:SelectionProps):JSX.Element => {
+
+
+const options = ["90", "130", "154", "230", "300"]
+export const Selection: FC<SelectionProps> = ({children}:SelectionProps):JSX.Element => {
+
+
     const [textValueLs, setTextValueLs] = useState<string>("");
     const [textValueEngine, setTextValueEngine] = useState<string>("")
     const [textValueSpeed, setTextValueSpeed] = useState<string>("")
+    const dispatch = useAppDispatch();
+
 
     const handleChangeLs = (event:ChangeEvent<HTMLInputElement>):void => {
         setTextValueLs(event.target.value);
+        dispatch(reset())
+        dispatch(sortByPower({type: "POWER_LS", powerLs: +event.target.value}))
     }
 
     const handleChangeEngine = (event:ChangeEvent<HTMLInputElement>):void => {
