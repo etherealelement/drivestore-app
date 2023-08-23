@@ -5,17 +5,13 @@ import {ArrowDown} from "../../ui/arrows/ArrowDown.tsx";
 import {Checkbox} from "../../ui/checkbox/Checkbox.tsx";
 import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 import {reset, sortByAvailability} from "../../../store/slices/catalogCardSlice.ts";
+import  useToggle  from '../../../hooksApp/useToggle.ts';
 export const Availability: FC = () => {
-    const [arrow, setArrow] = useState(true);
     const [checkedHave, setCheckedHave] = useState<boolean>(true);
     const [checkedOrder, setCheckedOrder] = useState<boolean>(true);
+    const [value, setValue] = useToggle(true);
     const dispatch = useAppDispatch();
-    // фильтрация по наличию товара
-    const handleArrow = () => {
-        setArrow(!arrow)
-    }
-
-    console.log(checkedHave);
+ 
 
 
     // функция сортировки по наличию
@@ -44,14 +40,14 @@ export const Availability: FC = () => {
 
 
     return <div className={styles.availability}>
-        <div className={styles.availability__block} onClick={handleArrow}>
+        <div className={styles.availability__block} onClick={setValue}>
             <span className={styles.availability__block_drop}>
-                {arrow ? <ArrowUp/> : <ArrowDown/>}
+                {value ? <ArrowUp/> : <ArrowDown/>}
             </span>
             <span className={styles.availability__block_spn}>Наличие</span>
         </div>
 
-        <div className={`${arrow ? styles.availability__block_input : styles.hidden}`}>
+        <div className={`${value ? styles.availability__block_input : styles.hidden}`}>
             <Checkbox type={"checkbox"} labelColor={"default"} onClick={() => dispatch(reset())}>Все</Checkbox>
             <Checkbox type={"checkbox"} labelColor={"default"} onClick={handleSortHave}>В наличии</Checkbox>
             <Checkbox type={"checkbox"} labelColor={"default"}  onClick={handleSortOrdered}>Под заказ</Checkbox>
