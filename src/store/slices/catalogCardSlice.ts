@@ -97,7 +97,7 @@ const catalogCardSlice = createSlice({
 		},
 
 		sortByBrand(state, action) {
-			switch (action.type) {
+			switch (action.payload.title) {
 				case "BRP": {
 					state.catalog = state.catalog.filter(
 						(item) => item.brand === action.payload.brand
