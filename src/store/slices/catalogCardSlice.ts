@@ -122,6 +122,35 @@ const catalogCardSlice = createSlice({
 				}
 			}
 		},
+
+		sortByModel(state, action) {
+			switch(action.payload.type) {
+				
+				case "SEARCH_BY_NAME":  {
+					state.catalog = state.catalog.filter(item => item.title.toLocaleLowerCase().includes(action.payload.searchText.toLowerCase()));
+					break;
+				}
+				case "SEA_DOO_SPARK_2" : {
+					state.catalog =state.catalog.filter(item => item.title  === action.payload.searchText)
+					break;
+				}
+				case "SEA_DOO_GTI_155" : {
+					state.catalog =state.catalog.filter(item => item.title  === action.payload.searchText)
+					break;
+				}
+				case "SEA_DOO_SPARK_90" : {
+					state.catalog =state.catalog.filter(item => item.title  === action.payload.searchText)
+					break;
+				}
+				case "SEA_DOO_GTR_230" : {
+					state.catalog =state.catalog.filter(item => item.title  === action.payload.searchText)
+					break;
+				}
+				
+			}
+		},
+		
+
 	},
 });
 
@@ -132,6 +161,7 @@ export const {
 	sortByNew,
 	sortByPrice,
 	sortByPower,
-    sortByBrand
+    sortByBrand,
+	sortByModel
 } = catalogCardSlice.actions;
 export default catalogCardSlice.reducer;

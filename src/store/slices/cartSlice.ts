@@ -2,10 +2,6 @@ import {createSlice} from "@reduxjs/toolkit";
 import {initialState} from "../types/cartType.ts";
 import {CartItemInterface} from "../interfaces/cartSliceInterface.ts";
 
-
-
-
-
 const cartSlice = createSlice({
     name: "cart",
     initialState,
