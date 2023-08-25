@@ -23,6 +23,8 @@ export type CatalogCardType = {
     brand: string,
     model: string,
     country: string,
+    hit: boolean,
+    diller: boolean,
 }
 
 export type CatalogCardState ={

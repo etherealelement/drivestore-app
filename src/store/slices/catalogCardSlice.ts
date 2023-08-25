@@ -146,10 +146,34 @@ const catalogCardSlice = createSlice({
 					state.catalog =state.catalog.filter(item => item.title  === action.payload.searchText)
 					break;
 				}
-				
+				default: {
+					throw new Error("Не верный параметр/свойство сортировки")
+				}
 			}
 		},
-		
+		sortByStocks(state, action) {
+			switch(action.payload.type) {
+				case "SORT_BY_SALE": {
+					state.catalog = state.catalog.filter(item => item.sale)
+					break
+				}
+				case "SORT_BY_NEW": {
+					state.catalog = state.catalog.filter(item => item.new)
+					break;
+				}
+				case "SORT_BY_HIT" : {
+					state.catalog = state.catalog.filter(item => item.hit)
+					break;
+				}
+				case "SORT_BY_DILLER": {
+					state.catalog = state.catalog.filter(item => item.diller);
+					break;
+				}
+				default: {
+					throw new Error("Не верный параметр сортировки")
+				}	
+			} 
+		}
 
 	},
 });
@@ -162,6 +186,7 @@ export const {
 	sortByPrice,
 	sortByPower,
     sortByBrand,
-	sortByModel
+	sortByModel,
+	sortByStocks
 } = catalogCardSlice.actions;
 export default catalogCardSlice.reducer;

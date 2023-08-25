@@ -30,6 +30,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: true,
+        diller: true,
     },
     {
         id: 2,
@@ -53,6 +55,8 @@ export const popularProduct:ProductData[] = [
         brand: "BRP",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: true,
+        diller: true,
     },
     {
         id: 3,
@@ -77,6 +81,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 2",
         country: "RUSSIA",
+        hit: true,
+        diller: true,
     },
     {
         id: 4,
@@ -100,6 +106,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 2",
         model: "Sea-doo Spark 2",
         country: "RUSSIA",
+        hit: true,
+        diller: true,
     },
     {
         id: 5,
@@ -123,6 +131,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 2",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: true,
+        diller: true,
     },
     {
         id: 6,
@@ -147,6 +157,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 3",
         model: "BRP Audio-портативная система",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 7,
@@ -170,6 +182,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 3",
         model: "BRP Audio-портативная система",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 8,
@@ -194,6 +208,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 3",
         model: "BRP Audio-портативная система",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 9,
@@ -217,6 +233,8 @@ export const popularProduct:ProductData[] = [
         brand: "Spark 3",
         model: "BRP Audio-портативная система",
         country: "RUSSIA",
+        hit: false,
+        diller: true,
     },
 ]
 
@@ -246,6 +264,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "BRP Audio-портативная система",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 11,
@@ -269,6 +289,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 3",
         country: "USA",
+        hit: true,
+        diller: false,
     },
     {
         id: 12,
@@ -293,6 +315,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 2",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 13,
@@ -316,6 +340,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "SeaDoo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 14,
@@ -339,6 +365,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "SeaDoo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 15,
@@ -363,6 +391,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "SeaDoo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 16,
@@ -386,6 +416,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "SeaDoo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 17,
@@ -410,6 +442,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "SeaDoo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 18,
@@ -433,6 +467,8 @@ export const popularProduct2:ProductData[] = [
         brand: "Spark 3",
         model: "SeaDoo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
 ]
 
@@ -461,6 +497,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 20,
@@ -484,6 +522,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 2",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 21,
@@ -507,6 +547,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 2",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 22,
@@ -530,6 +572,8 @@ export const catalogData:ProductData[] = [
         brand: "BRP",
         model: "Sea-doo Spark 2",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 23,
@@ -553,6 +597,8 @@ export const catalogData:ProductData[] = [
         brand: "BRP",
         model: "Sea-doo Spark 90",
         country: "USA",
+        hit: false,
+        diller: true,
     },
     {
         id: 24,
@@ -576,6 +622,8 @@ export const catalogData:ProductData[] = [
         brand: "BRP",
         model: "Sea-doo Spark 90",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 25,
@@ -599,6 +647,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 2",
         country: "CANADA",
+        hit: true,
+        diller: false,
     },
     {
         id: 26,
@@ -623,6 +673,8 @@ export const catalogData:ProductData[] = [
         brand: "BRP",
         model: "Sea-doo Spark 3",
         country: "USA",
+        hit: true,
+        diller: false,
     },
     {
         id: 27,
@@ -646,6 +698,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 90",
         country: "USA",
+        hit: true,
+        diller: false,
     },
     {
         id: 28,
@@ -669,6 +723,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 2",
         model: "Sea-doo Spark 90",
         country: "USA",
+        hit: false,
+        diller: false,
     },
     {
         id: 29,
@@ -692,6 +748,8 @@ export const catalogData:ProductData[] = [
         brand: "BRP",
         model: "Sea-doo Spark 90",
         country: "USA",
+        hit: false,
+        diller: false,
     },
     {
         id: 30,
@@ -715,6 +773,8 @@ export const catalogData:ProductData[] = [
         brand: "Spark 3",
         model: "Sea-doo Spark 3",
         country: "USA",
+        hit: false,
+        diller: false,
     },
 
 ]

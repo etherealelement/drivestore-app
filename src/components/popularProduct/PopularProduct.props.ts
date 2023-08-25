@@ -28,6 +28,8 @@ export interface ProductData
         brand: string,
         model: string,
         country: string,
+        hit: boolean,
+        diller: boolean,
     }
 
 
