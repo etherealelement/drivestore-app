@@ -15,6 +15,7 @@
       background:  #1C62CD;
       border: none;
       transition: all .3s;
+      cursor: pointer;
       &:hover  {
         transform: translateY(-3px);
         background: #719bd9;
@@ -29,6 +30,7 @@
       padding: 6px 15px;
       border: none;
       transition: all .3s;
+      cursor: pointer;
       &:hover  {
         transform: translateY(-3px);
         background: #c0baba;
@@ -44,7 +46,7 @@
       padding: 6px 15px;
       border: none;
       transition: all .3s;
-
+      cursor: pointer;
       &:hover  {
         transform: translateY(-3px);
         background: #c0baba;
@@ -60,6 +62,7 @@
       background: #2F3035;
       border: none;
       transition: all .3s;
+      cursor: pointer;
       &:hover{
         transform: translateY(-3px);
         background: #8d8888;

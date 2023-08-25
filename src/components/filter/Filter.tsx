@@ -13,7 +13,6 @@ import {Choose} from "./choose/Choose.tsx";
 
 const navArr: string[] = ["ПАРАМЕТРЫ","ПО МАРКЕ"];
 const optionsTitle: string[] = ["Мощность, л.с.", "Мощность двигателя, л.с.", "Макс. скорость"];
-const countriesArr: string[] = ["Россия", "Китай", "Германия", "CША"]
 
 
 export const Filter: FC = () => {
@@ -31,7 +30,6 @@ export const Filter: FC = () => {
         <Brand></Brand>
         <Model></Model>
         <Stocks></Stocks>
-        <Countries countries={countriesArr}></Countries>
-        <Choose></Choose>
+        <Countries></Countries>
     </div>;
 };

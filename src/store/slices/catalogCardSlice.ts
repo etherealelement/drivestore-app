@@ -173,6 +173,27 @@ const catalogCardSlice = createSlice({
 					throw new Error("Не верный параметр сортировки")
 				}	
 			} 
+		},
+
+		sortByCountries(state, action) {
+			switch(action.payload.type) {
+				case "SORT_BY_RUSSIA": {
+					state.catalog = state.catalog.filter(item => item.country === action.payload.searchText)
+					break;
+				}
+				case "SORT_BY_USA": {
+					state.catalog = state.catalog.filter(item => item.country === action.payload.searchText)
+					break;
+				}
+				case "SORT_BY_GERMANY": {
+					state.catalog = state.catalog.filter(item => item.country === action.payload.searchText)
+					break;
+				}
+				case "SORT_BY_CHINA": {
+					state.catalog = state.catalog.filter(item => item.country === action.payload.searchText)
+					break;
+				}
+			}
 		}
 
 	},
@@ -187,6 +208,7 @@ export const {
 	sortByPower,
     sortByBrand,
 	sortByModel,
-	sortByStocks
+	sortByStocks,
+	sortByCountries
 } = catalogCardSlice.actions;
 export default catalogCardSlice.reducer;
