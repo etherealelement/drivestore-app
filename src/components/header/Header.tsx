@@ -69,7 +69,7 @@ export const Header: FC = memo( () => {
                 <ul className={styles.header__bottom_list}>
                     {navigationArr.map((item, index) => {
                         return <li className={styles.header__bottom_list_item} key={index}>
-                            <Link to={"#"} className={styles.header__bottom_list_item_link}>{item}</Link>
+                            <Link to={"/catalog"} className={styles.header__bottom_list_item_link}>{item}</Link>
                         </li>
                     }) }
                 </ul>
