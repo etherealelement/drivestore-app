@@ -10,7 +10,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 1,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-1.png',
+        image: '/image-1.png',
         title: "BRP Audio-портативная система",
         price: "",
         message: "нет в наличии",
@@ -36,7 +36,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 2,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-2.png',
+        image: '/image-2.png',
         title: "Garmin Echomap Plus 62cv",
         price: 45800,
         sale: true,
@@ -61,7 +61,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 3,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-3.png',
+        image: '/image-3.png',
         title: "RF D.E.S.S.TM Key",
         price: "",
         message: "нет в наличии",
@@ -87,7 +87,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 4,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-4.png',
+        image: '/image-4.png',
         title: "Мужской костюм 3мм",
         price: 7000,
         sale: false,
@@ -112,7 +112,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 5,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-4.png',
+        image: '/image-4.png',
         title: "Мужской костюм 3мм",
         price: 7000,
         sale: false,
@@ -137,7 +137,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 6,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-1.png',
+        image: '/image-1.png',
         title: "BRP Audio-портативная система",
         price: "",
         message: "нет в наличии",
@@ -163,7 +163,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 7,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-2.png',
+        image: '/image-2.png',
         title: "Garmin Echomap Plus 62cv",
         price: 56000,
         sale: true,
@@ -188,7 +188,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 8,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-3.png',
+        image: '/image-3.png',
         title: "RF D.E.S.S.TM Key",
         price: "",
         message: "нет в наличии",
@@ -214,7 +214,7 @@ export const popularProduct:ProductData[] = [
     {
         id: 9,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-4.png',
+        image: '/image-4.png',
         title: "Мужской костюм 3мм",
         price: 7000,
         sale: false,
@@ -244,7 +244,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 10,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-1.png',
+        image: '/image-1.png',
         title: "BRP Audio-портативная система",
         price: "",
         message: "нет в наличии",
@@ -270,7 +270,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 11,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-2.png',
+        image: '/image-2.png',
         title: "Garmin Echomap Plus 62cv",
         price: 45800,
         sale: true,
@@ -295,7 +295,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 12,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-3.png',
+        image: '/image-3.png',
         title: "RF D.E.S.S.TM Key",
         price: "",
         message: "нет в наличии",
@@ -321,7 +321,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 13,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-4.png',
+        image: '/image-4.png',
         title: "Мужской костюм 3мм",
         price: 7000,
         sale: false,
@@ -346,7 +346,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 14,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-4.png',
+        image: '/image-4.png',
         title: "Мужской костюм 3мм",
         price: 7000,
         sale: false,
@@ -371,7 +371,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 15,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-1.png',
+        image: '/image-1.png',
         title: "BRP Audio-портативная система",
         price: "",
         message: "нет в наличии",
@@ -397,7 +397,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 16,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-2.png',
+        image: '/image-2.png',
         title: "Garmin Echomap Plus 62cv",
         price: 45800,
         sale: true,
@@ -422,7 +422,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 17,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-3.png',
+        image: '/image-3.png',
         title: "RF D.E.S.S.TM Key",
         price: "",
         message: "нет в наличии",
@@ -448,7 +448,7 @@ export const popularProduct2:ProductData[] = [
     {
         id: 18,
         category: "электроника",
-        image: 'src/assets/popularProductSale/image-4.png',
+        image: '/image-4.png',
         title: "Мужской костюм 3мм",
         price: 7000,
         sale: false,
@@ -578,7 +578,7 @@ export const catalogData:ProductData[] = [
     {
         id: 23,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-5.png',
+        image: '/image-card-5.png',
         title: "Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue",
         price: 780990,
         sale: false,
@@ -603,7 +603,7 @@ export const catalogData:ProductData[] = [
     {
         id: 24,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-6.png',
+        image: '/image-card-6.png',
         title: "Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper",
         price: 780990,
         sale: false,
@@ -628,7 +628,7 @@ export const catalogData:ProductData[] = [
     {
         id: 25,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-7.png',
+        image: '/image-card-7.png',
         title: "Гидроцикл Spark 2-UP 900 Ho Ace Pineapple",
         price: 105670,
         sale: false,
@@ -653,7 +653,7 @@ export const catalogData:ProductData[] = [
     {
         id: 26,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-8.png',
+        image: '/image-card-8.png',
         title: "Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla",
         price: "",
         sale: false,
@@ -679,7 +679,7 @@ export const catalogData:ProductData[] = [
     {
         id: 27,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-9.png',
+        image: '/image-card-9.png',
         title: "Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry",
         price: 780990,
         sale: false,
@@ -704,7 +704,7 @@ export const catalogData:ProductData[] = [
     {
         id: 28,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-10.png',
+        image: '/image-card-10.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
         price: 870950,
         sale: false,
@@ -729,7 +729,7 @@ export const catalogData:ProductData[] = [
     {
         id: 29,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-11.png',
+        image: '/image-card-11.png',
         title: "Гидроцикл BRP SeaDoo GTI 165hr",
         price: 980671,
         sale: false,
@@ -754,7 +754,7 @@ export const catalogData:ProductData[] = [
     {
         id: 30,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-12.png',
+        image: '/image-card-12.png',
         title: "Гидроцикл BRP SeaDoo Black",
         price: 550450,
         sale: false,
