@@ -54,19 +54,19 @@ export const Slider: FC = () => {
                 disableOnInteraction: false
             }}
             >
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                     <img src={sliderImage1} alt="slider-image"/>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                     <img src={sliderImage1} alt="slider-image"/>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                     <img src={sliderImage1} alt="slider-image"/>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                     <img src={sliderImage1} alt="slider-image"/>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                     <img src={sliderImage1} alt="slider-image"/>
                 </SwiperSlide>
 
