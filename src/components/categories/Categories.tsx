@@ -13,35 +13,35 @@ const categoryItems:ItemCategoriesProps[] = [
     {
         id: 0,
         title: "Квадроциклы",
-        image: "src/assets/categoriesItem/item-1.png",
+        image: "/item-1.png",
         link: "#",
     },
     {
         id: 1,
         title: "Гидроциклы",
-        image: "src/assets/categoriesItem/item-2.png",
+        image: "/item-2.png",
         link: "#",
     },
     {
         id: 2,
         title: "Катера",
-        image: "src/assets/categoriesItem/item-3.png",
+        image: "/item-3.png",
         link: "#",
     },
     {
         id: 3,
         title: "Снегоходы",
-        image: "src/assets/categoriesItem/item-4.png",
+        image: "/item-4.png",
         link: "#",
     },{
         id: 4,
         title: "Вездеходы",
-        image: "src/assets/categoriesItem/item-5.png",
+        image: "/item-5.png",
         link: "#",
     },{
         id: 5,
         title: "Двигатели",
-        image: "src/assets/categoriesItem/item-6.png",
+        image: "/item-6.png",
         link: "#",
     }
 ]
