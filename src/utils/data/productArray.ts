@@ -478,7 +478,7 @@ export const catalogData:ProductData[] = [
     {
         id: 19,
         category: "гидроциклы",
-        image: '/catalogData/image-card-1.png',
+        image: '/image-card-1.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
         price: 1049500,
         sale: false,
@@ -503,7 +503,7 @@ export const catalogData:ProductData[] = [
     {
         id: 20,
         category: "гидроциклы",
-        image: '/catalogData/image-card-2.png',
+        image: '/image-card-2.png',
         title: "Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic",
         price: 560679,
         sale: true,
@@ -528,7 +528,7 @@ export const catalogData:ProductData[] = [
     {
         id: 21,
         category: "гидроциклы",
-        image: '/catalogData/image-card-3.png',
+        image: '/image-card-3.png',
         title: "Гидроцикл BRP SeaDoo GTR 230hp X California green ",
         price: 560679,
         sale: false,
@@ -553,7 +553,7 @@ export const catalogData:ProductData[] = [
     {
         id: 22,
         category: "гидроциклы",
-        image: '/catalogData/image-card-4.png',
+        image: '/image-card-4.png',
         title: "Гидроцикл BRP SeaDoo Spark GTS 90hp Rental",
         price: 780990,
         sale: false,
