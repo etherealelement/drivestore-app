@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 // @ts-ignore
 import {EffectCoverflow, Pagination, Navigation} from "swiper";
 
-import sliderImage1 from "../../../public/image-1.png";
+import sliderImage1 from "../../assets/bannerImages/slider_image1.jpg";
 
 export const Slider: FC = () => {
     return (
