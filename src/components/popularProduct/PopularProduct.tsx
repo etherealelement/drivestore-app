@@ -19,8 +19,6 @@ import "swiper/css/navigation";
 // @ts-ignore
 import {EffectCoverflow, Navigation} from "swiper";
 
-import sliderImage1 from "../../assets/bannerImages/slider_image1.jpg";
-import {popularProduct} from "../../utils/data/productArray.ts";
 
 
 export const PopularProduct: FC<PopularProductProps> = ({ProductData, title, navData}:PopularProductProps):JSX.Element => {

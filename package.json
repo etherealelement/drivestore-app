@@ -33,6 +33,7 @@
     "sass": "^1.63.4",
     "swiper": "^9.4.1",
     "use-immer": "^0.9.0",
+    "vercel": "^32.1.0",
     "vite-plugin-svgr": "^3.2.0",
     "zustand": "^4.4.1"
   },

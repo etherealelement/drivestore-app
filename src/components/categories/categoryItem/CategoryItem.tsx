@@ -4,7 +4,7 @@ import styles from "./CategoryItem.module.scss";
 import { Link } from 'react-router-dom';
 
 
-export const CategoryItem: FC<CategoryItemProps> = ({image, title, link}:CategoryItemProps):JSX.Element => {
+export const CategoryItem: FC<CategoryItemProps> = ({image, title}:CategoryItemProps):JSX.Element => {
     return <>
         <Link to="/catalog" className={styles.categoryItem}>
             <div className={styles.categoryItem__text}>

@@ -83,7 +83,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
             rating: rating,
         }))
         deleteCard(deleteProductCard(
-            itemId,
+
         ))
     }
 

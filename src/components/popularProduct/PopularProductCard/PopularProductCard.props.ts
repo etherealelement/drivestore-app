@@ -8,11 +8,11 @@ export interface PopularProductCardProps extends DetailedHTMLProps<HTMLAttribute
     price: number | string,
     message?: string,
     sale: boolean,
-    manufacturer: string,
-    placeQuantity: number,
-    powerEngine: number,
-    engineType: string,
-    releaseYear: number;
-    rating: number,
-    availability: string,
+    manufacturer?: string,
+    placeQuantity?: number,
+    powerEngine?: number,
+    engineType?: string,
+    releaseYear?: number;
+    rating?: number,
+    availability?: string,
 }

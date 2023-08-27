@@ -1,8 +1,7 @@
-import {ChangeEvent, FC, useEffect, useState} from 'react';
+import { FC, useEffect, useState} from 'react';
 import styles from "./Model.module.scss";
 import {FilterDropdown} from "../../ui/filterDropdown/FilterDropdown.tsx";
 import {TextField, Box} from "@mui/material";
-import {Checkbox} from "../../ui/checkbox/Checkbox.tsx";
 import { useAppDispatch } from '../../../store/hooks/hooks.ts';
 import { reset, sortByModel } from '../../../store/slices/catalogCardSlice.ts';
 

@@ -10,17 +10,17 @@ import {deleteCartItem} from "../../../store/slices/cartSlice.ts";
 
 export const CartItems: FC<CartItemsProps> = memo(({itemId,category,image,title,price,}): JSX.Element => {
 	const [count, setCount] = useState<number>(1);
-	const [totalCount, setTotalCount] = useState<number | string>(price);
+	const [totalCount, setTotalCount] = useState<number>(price);
 
 	console.log("[eq")
 
 	const handleIncrement = useCallback(() => {
-		setTotalCount(e => e + price)
+		setTotalCount(e => e + (price))
 		setCount((e) => e + 1);
 	}, [price])
 
 	const handleDecrement = useCallback( () => {
-		setTotalCount(e => count === 1 ? price : e - price)
+		setTotalCount(e => count === 1 ? price : e - (price as number))
 		setCount(e =>  e === 1 ? 1 : e - 1)
 	}, [price]);
 
@@ -46,7 +46,7 @@ export const CartItems: FC<CartItemsProps> = memo(({itemId,category,image,title,
 						<h2 className={styles.title}>{title}</h2>
 						<p className={styles.item__category}>{category}</p>
 						<span className={styles.item__price}>
-							<b>Стоимость: {price === "" ? "Нет в наличии" : price}₽</b>
+							<b>Стоимость: {price === 0 ? "Нет в наличии" : price}₽</b>
 						</span>
 					</div>
 				</div>

@@ -5,7 +5,7 @@ export interface CartItemsProps extends DetailedHTMLProps<HTMLAttributes<HTMLLIE
     category: string,
     image: string,
     title: string,
-    price: string | number,
+    price: number,
     message: string,
     sale?: boolean,
 }

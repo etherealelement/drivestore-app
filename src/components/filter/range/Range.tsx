@@ -8,8 +8,8 @@ import {reset, sortByPrice} from "../../../store/slices/catalogCardSlice.ts";
 
 
 export const RangeSlider: FC = (): JSX.Element => {
-	const [minValue, setMinValue] = useState<number>(0)
-	const [maxValue, setMaxValue] = useState<number>(1500000)
+	const [minValue] = useState<number>(0)
+	const [maxValue] = useState<number>(1500000)
 	const [arrow, setArrow] = useState(true);
 	const [value, setValue] =  useState([minValue, maxValue]);
 
@@ -18,6 +18,7 @@ export const RangeSlider: FC = (): JSX.Element => {
 
 	// Changing State when volume increases/decreases
 	const onPriceChange= useCallback((e: any, newValue: any) => {
+		console.log(e)
 		setValue(newValue)
 		
 	}, [value])

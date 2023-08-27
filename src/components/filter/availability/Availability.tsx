@@ -5,14 +5,15 @@ import {ArrowDown} from "../../ui/arrows/ArrowDown.tsx";
 import {Checkbox} from "../../ui/checkbox/Checkbox.tsx";
 import {useAppDispatch} from "../../../store/hooks/hooks.ts";
 import {reset, sortByAvailability} from "../../../store/slices/catalogCardSlice.ts";
-import  useToggle  from '../../../hooksApp/useToggle.ts';
 export const Availability: FC = () => {
     const [checkedHave, setCheckedHave] = useState<boolean>(true);
     const [checkedOrder, setCheckedOrder] = useState<boolean>(true);
-    const [value, setValue] = useToggle(true);
+    const [value, setValue] = useState<boolean>(true)
     const dispatch = useAppDispatch();
  
-
+    const handleArrow = () => {
+        setValue(e => !e)
+    }
 
     // функция сортировки по наличию
     const handleSortHave = () => {
@@ -40,7 +41,7 @@ export const Availability: FC = () => {
 
 
     return <div className={styles.availability}>
-        <div className={styles.availability__block} onClick={setValue}>
+        <div className={styles.availability__block} onClick={handleArrow}>
             <span className={styles.availability__block_drop}>
                 {value ? <ArrowUp/> : <ArrowDown/>}
             </span>
