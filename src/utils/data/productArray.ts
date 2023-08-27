@@ -478,7 +478,7 @@ export const catalogData:ProductData[] = [
     {
         id: 19,
         category: "гидроциклы",
-        image: 'src/assets/catalogData/image-card-1.png',
+        image: 'assets/catalogData/image-card-1.png',
         title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\\Mango",
         price: 1049500,
         sale: false,
