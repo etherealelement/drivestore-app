@@ -8,6 +8,8 @@ import {Link} from "react-router-dom";
 import {FavActive} from "../ui/favicons/FavActive.tsx";
 import {FavDisable} from "../ui/favicons/FavDisable.tsx";
 import {Button} from "../ui/Button/Button.tsx";
+import { useAppDispatch } from '../../store/hooks/hooks.ts';
+import { addCartItem } from '../../store/slices/cartSlice.ts';
 
 
 
@@ -15,6 +17,9 @@ import {Button} from "../ui/Button/Button.tsx";
 
 export const CardPreview: FC<CardPreviewProps> = ({itemId, sale, title, image, price, manufacturer, placeQuantity, powerEngine, engineType,releaseYear, rating, oldPrice}: CardPreviewProps):JSX.Element => {
     const [active, setActive] = useState<boolean>(false)
+   const dispatch = useAppDispatch()
+
+
 
     return <div className={styles.card}>
         <div className="container">
@@ -94,8 +99,9 @@ export const CardPreview: FC<CardPreviewProps> = ({itemId, sale, title, image, p
                             </li>
                         </ul>
                         <Link to="/" className={styles.characteristics__link}>Показать еще</Link>
-                        <Link to="/">
+                        <Link to="/cart">
                             <Button type={"button"} size={"medium"} border={true}
+                            onClick={() => dispatch(addCartItem({itemId, sale, title, image, price, manufacturer, placeQuantity, powerEngine, engineType,releaseYear, rating, oldPrice}))}
                             >купить</Button>
                         </Link>
                     </div>

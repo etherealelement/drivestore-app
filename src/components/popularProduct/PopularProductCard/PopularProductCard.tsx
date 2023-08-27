@@ -50,7 +50,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
         setActiveProduct(!activeProduct)
     }
 
-    // Добавление элеманта в избранное
+    // Добавление элемента в избранное
 
     const addToFav = () => {
         favDispath(addFavorites({

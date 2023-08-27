@@ -3,7 +3,7 @@ import styles from "./Search.module.scss"
 import {SearchTabs} from "./searchTabs/searchTabs.tsx";
 import {SearchListItemProps} from "./Search.props.ts";
 import {Button} from "../ui/Button/Button.tsx";
-
+import { Link } from 'react-router-dom';
 
 const tabArray:SearchListItemProps[] = [
     {
@@ -44,7 +44,7 @@ export const Search: FC = () => {
                     <div id={"tab-1"} className={styles.search__block_item}>
                         <form className={styles.search__block_form}>
                             <input placeholder={tabName} type="text" className={styles.search__block_form_input}/>
-                            <Button type={"submit"} size={"medium"} border={true}>искать</Button>
+                            <Link to="/catalog"><Button type={"submit"} size={"medium"} border={true}>искать</Button></Link>
                         </form>
                     </div>
                 </div>

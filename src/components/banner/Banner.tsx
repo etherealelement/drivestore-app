@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styles from "./Banner.module.scss";
 import {BannerCard} from "./BannerCard/BannerCard.tsx";
 import {Slider} from "../slider/Slider.tsx";
+import { Link } from 'react-router-dom';
 
 export const Banner: FC = ():JSX.Element => {
     return <section className={styles.banner}>
@@ -10,9 +11,9 @@ export const Banner: FC = ():JSX.Element => {
                 <div className={styles.slider}>
                     <Slider></Slider>
                 </div>
-                <div className={styles.banner__card}>
+                <Link to="/catalog" className={styles.banner__card}>
                     <BannerCard></BannerCard>
-                </div>
+                </Link>
             </div>
         </div>
     </section>;
