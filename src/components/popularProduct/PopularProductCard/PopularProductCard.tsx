@@ -99,7 +99,7 @@ export const PopularProductCard: FC<PopularProductCardProps> = ({itemId, categor
         </button>
 
         <div className={styles.cardItem__block}>
-            <img src={image} alt="product-item"/>
+            <img src={image} alt="product-item" />
 
             <Link to={"/card"}>
                 <p className={styles.cardItem__block_descr} onClick={addCardPage}>
