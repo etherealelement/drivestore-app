@@ -10,6 +10,7 @@ const Catalog = lazy(() => import("./pages/Catalog.tsx"))
 const ProductCard = lazy(() => import("./pages/ProductCard.tsx"));
 const Cart = lazy(() => import("./pages/Cart.tsx"));
 
+
 function App() {
 
     return (
