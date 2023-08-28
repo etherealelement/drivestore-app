@@ -7,7 +7,7 @@ import arrowLeft from "../../assets/bannerImages/arrow-left.svg";
 import {Autoplay} from "swiper";
 
 
-import "swiper/css";
+
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
