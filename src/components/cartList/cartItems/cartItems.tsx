@@ -46,7 +46,7 @@ export const CartItems: FC<CartItemsProps> = memo(({itemId,category,image,title,
 						<h2 className={styles.title}>{title}</h2>
 						<p className={styles.item__category}>{category}</p>
 						<span className={styles.item__price}>
-							<b>Стоимость: {price === "" ? "Нет в наличии" : price}₽</b>
+							<b>Стоимость: {price  ? "Нет в наличии" : price}₽</b>
 						</span>
 					</div>
 				</div>
